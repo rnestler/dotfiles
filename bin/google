@@ -1,0 +1,12 @@
+#!/bin/bash
+
+Browser=firefox
+
+if [ -n "$1" ]
+then
+  keyword=$1
+else
+  keyword="let me google for you"
+fi
+
+$Browser "http://www.google.ch/search?q=$keyword"

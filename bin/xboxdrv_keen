@@ -1,0 +1,1 @@
+sudo xboxdrv --ui-buttonmap START=KEY_ESC -s --ui-buttonmap Y=KEY_Y

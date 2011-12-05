@@ -1,0 +1,50 @@
+
+URxvt.saveLines: 10000
+URxvt.scrollBar: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
+#URxvt.transparent: true
+#URxvt.tintColor: midnightblue
+
+#URxvt.shading: 30
+URxvt.depth: 32
+URxvt.background: rgba:1000/1000/1000/dddd
+URxvt.foreground: rgba:E000/E000/E000/FFFF
+URxvt.font: xft:Bitstream Vera Sans Mono:size=10
+
+#URxvt.tabbed.scrollBar: false
+#URxvt.tabbed.tabbar-fg: 3
+#URxvt.tabbed.tabbar-bg: 0
+
+URxvt.urgentOnBell: true
+URxvt.fading: 20
+
+URxvt.perl-ext-common:       default,matcher
+URxvt.urlLauncher:           firefox
+# matcher.button # 3 is a right-click
+URxvt.matcher.button:        1
+
+URxvt.iconFile:       /usr/share/icons/oxygen/32x32/apps/utilities-terminal.png
+
+#IRC.iconFile:        /usr/share/icons/Tango/32x32/apps/internet-group-chat.png
+
+#   URxvt.cursorColor:  #dc74d1
+#   URxvt.pointerColor: #dc74d1
+#   URxvt.foreground:   #4ad5e1
+#   URxvt.color0:       #000000
+#   URxvt.color8:       #8b8f93
+#   URxvt.color1:       #dc74d1
+#   URxvt.color9:       #dc74d1
+#   URxvt.color2:       #0eb8c7
+#   URxvt.color10:      #0eb8c7
+#   URxvt.color3:       #dfe37e
+#   URxvt.color11:      #dfe37e
+#   URxvt.color5:       #9e88f0
+#   URxvt.color13:      #9e88f0
+#   URxvt.color6:       #73f7ff
+#   URxvt.color14:      #73f7ff
+#   URxvt.color7:       #e1dddd
+#   URxvt.color15:      #e1dddd
+
+

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+myvar=""
+
+for (( x=1; $x <= $#; x=$x+1 )); do
+  echo arg $x
+  myvar=$myvar+$$x
+done
+
+echo $myvar
+
+echo $(($1))
+
+

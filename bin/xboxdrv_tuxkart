@@ -1,0 +1,1 @@
+sudo xboxdrv -s --deadzone 3000 --trigger-as-button --ui-buttonmap START=KEY_ESC 

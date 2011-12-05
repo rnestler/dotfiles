@@ -1,0 +1,1 @@
+sudo xboxdrv -s --ui-buttonmap START=KEY_P --deadzone 3000

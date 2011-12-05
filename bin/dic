@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -n "$1" ]
+then
+  keyword=$1
+else
+  keyword="english"
+fi
+
+firefox "http://dict.leo.org/?search=$keyword"
