@@ -1,5 +1,6 @@
-
-if [ xdynpm == x$1 ]; then
+if [ x == x$1 ]; then
+	echo usage: $0 "[dynpm,low,mid,high]"
+elif [ dynpm == $1 ]; then
 	echo $1 > /sys/class/drm/card0/device/power_method
 else
 	echo profile > /sys/class/drm/card0/device/power_method
