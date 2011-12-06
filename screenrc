@@ -2,6 +2,12 @@
 term screen-256color
 terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
+screen -t zsh zsh
+screen -t news newsbeuter
+screen -t mutt mut
+
+select 0
+
 bind 'l' next
 bind 'h' prev
 
