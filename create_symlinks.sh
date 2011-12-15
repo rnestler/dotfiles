@@ -16,7 +16,11 @@ done
 mkdir -p ~/.config/
 for file in `find ${PWD}/config/ -maxdepth 1 -not -name '.*' -not -name config`; do
 	filename=`basename "$file"`
-	echo "ln -s `pwd`/config/$filename -> ~/.config/$filename"
-	ln -s `pwd`/config/$filename ~/.config/$filename
+	if [ -e ~/.config/$filename ]; then
+		echo $filename already exists
+	else
+		echo "ln -s `pwd`/config/$filename -> ~/.config/$filename"
+		ln -s `pwd`/config/$filename ~/.config/$filename
+	fi
 done
 
