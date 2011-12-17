@@ -2,8 +2,16 @@
 
 for file in `find ${PWD} -maxdepth 1 -not -name '.*' -not -name README -not -name create_symlinks.sh -not -name bin -not -name config -type f`; do
 filename=`basename "$file"`
-	echo "ln -s `pwd`/$filename -> ~/.$filename"
-	ln -s `pwd`/$filename ~/.$filename
+	if [ -e ~/.$filename ]; then
+		if [ -L ~/.$filename ]; then
+			echo "~/.$filename already exists"
+		else
+			echo "WARNING: ~/.$filename already exists and is no symlink!"
+		fi
+	else
+		echo "ln -s `pwd`/$filename -> ~/.$filename"
+		ln -s `pwd`/$filename ~/.$filename
+	fi
 done
 
 # $1 src $2 target
