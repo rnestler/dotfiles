@@ -12,3 +12,7 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 
 export PATH=$PATH:~/bin
+
+
+export WINEARCH=win32 # default to win32
+export BROWSER=firefox
