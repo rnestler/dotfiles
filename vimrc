@@ -11,6 +11,8 @@ set ignorecase
 set smartcase
 set incsearch
 
+au BufRead /tmp/mutt-* set tw=72
+
 filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
