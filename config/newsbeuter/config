@@ -5,4 +5,4 @@ bind-key K prev-feed
 bind-key L toggle-show-read-feeds
 bind-key l open
 bind-key h quit
-browser "firefox %u"
+browser "bash -c \"firefox %u &>/dev/null&\""
