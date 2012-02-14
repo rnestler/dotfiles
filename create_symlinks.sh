@@ -16,7 +16,7 @@ done
 
 # $1 src $2 target
 function setupFolder {
-	mkdir -p ~/$1/
+	mkdir -p ~/$2/
 	for file in `find ${PWD}/${1}/ -maxdepth 1 -not -name '.*' -not -name ${1}`; do
 		filename=`basename "$file"`
 		if [ -e ~/$2/$filename ]; then
