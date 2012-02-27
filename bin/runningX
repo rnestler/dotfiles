@@ -1,0 +1,2 @@
+#!/bin/bash
+[ $XDG_VTNR -ge 7 ]
