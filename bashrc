@@ -7,3 +7,11 @@
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
+
+export PATH=$PATH:~/bin
+
+shopt -s cdspell
+
+alias ..='cd ..'
+alias cd..='..'
+alias ...='cd ../..'
