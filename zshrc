@@ -14,6 +14,7 @@ bindkey -e
 
 export PATH=$PATH:~/bin
 
+alias :q=exit
 
 export WINEARCH=win32 # default to win32
 export BROWSER=firefox
