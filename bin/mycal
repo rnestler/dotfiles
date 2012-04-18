@@ -1,10 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
 
 date=$(date +%Y-%m-%d) 
 check=$(grep $date ~/Documents/Termine.txt)
-if [ "x$check" == "x" ];  then
-	echo nothing
-else
+if [ "x$check" != "x" ];  then
 	notify-send Reminder "$(echo $check | awk '{print $3" "$4" "$5" "$6}')"
 fi
 	
