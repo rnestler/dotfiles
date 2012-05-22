@@ -1,0 +1,36 @@
+#!/bin/bash
+
+
+function cleanup()
+{
+	sudo rmdir /var/lock/check_gpower
+	echo setting profile to low
+	gpower low
+	exit
+}
+
+mkdir /var/lock/check_gpower || exit 1
+
+trap "cleanup" EXIT
+
+function check()
+{
+	temp=$(sensors|grep temp1|awk -F+ '{print $2}'|awk -F. '{print $1}')
+
+	uplimit=100
+	lowlimit=80
+
+	if [ $temp -ge $uplimit ]; then
+		echo $temp higher then $uplimit
+		gpower low
+	elif [ $temp -le $lowlimit ]; then
+		echo $temp lower then $lowlimit
+		gpower high
+	fi
+}
+
+while true; do
+	check
+	sleep 30
+done
+
