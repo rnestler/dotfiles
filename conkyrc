@@ -103,9 +103,12 @@ ${voffset -0}${font Droid Sans:style=Bold:size=8}${color0}Temperatures${color} $
  ${color0}GPU:    $alignr$color${hwmon temp 1}°C
 ## Logs
 ${font Droid Sans:style=Bold:size=8}${color0}Logs${color} $stippled_hr${font}
-${tail /var/log/dmesg.log 5 10}
+$color0 dmesg
+${execpi 60 journalctl|tail -n 5|cut -d" " -f5-}
+${font Droid Sans:style=Bold:size=8}${color0}Weather${color} $stippled_hr${font}
+${execpi 300 weather.sh}
 ${font Droid Sans:style=Bold:size=8}${color0}Rss${color} $stippled_hr${font}
-$color0 Planet Arch
-$color${rss http://planet.archlinux.org/rss20.xml 1 item_titles 3 }
 $color0 Phoronix
 $color${rss  http://feeds.feedburner.com/Phoronix 1 item_titles 3 }
+$color0 Planet Arch
+$color${rss http://planet.archlinux.org/rss20.xml 1 item_titles 3 }
