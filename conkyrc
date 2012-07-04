@@ -61,9 +61,8 @@ TEXT
 #${color0}${scroll 41 $nodename - $sysname $kernel on $machine | }
 ${color0}$nodename - $sysname $kernel on $machine
 $hr
- ${color0}Uptime:$color $uptime
- ${color0}Frequency (in MHz):$color $freq
- ${color0}Frequency (in GHz):$color $freq_g
+ ${color0}Uptime:    $color $uptime
+ ${color0}Frequency: $color ${freq_g}GHz
  ${color0}RAM Usage: $color $mem/$memmax ${alignr}$memperc% ${membar 4,60}
  ${color0}Swap Usage:$color $swap/$swapmax ${alignr}$swapperc% ${swapbar 4,60}
  ${color0}CPU Usage: $color $alignr $cpu% ${cpubar 4,60}
