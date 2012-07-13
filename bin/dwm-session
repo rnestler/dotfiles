@@ -1,0 +1,5 @@
+nm-applet &
+~/bin/start_trayer.sh &
+urxvtd -q -o -f &
+xcompmgr &
+
