@@ -2,4 +2,9 @@ nm-applet &
 ~/bin/start_trayer.sh &
 urxvtd -q -o -f &
 xcompmgr &
+setxauth &
+while true; do
+	xsetroot -name "$(date '+%F %R')"
+	sleep 60
+done &
 
