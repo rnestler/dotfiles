@@ -1,6 +1,5 @@
 #!/bin/bash
 export R600_STREAMOUT=1
-export R600_GLSL130=1
 export vblank_mode=0
 if [ x$1 != x ]; then
 	prog=$1
