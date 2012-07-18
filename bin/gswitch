@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ x$1 == "xDIS" ]; then
+	echo switching to discrete card please restart Xserver
+	echo "ON"  > /sys/kernel/debug/vgaswitcheroo/switch
+	echo "DDIS" > /sys/kernel/debug/vgaswitcheroo/switch
+elif [ x$1 == "xIGD" ]; then
+	echo switching to integrated card please restart Xserver
+	echo "ON"  > /sys/kernel/debug/vgaswitcheroo/switch
+	echo "DIGD" > /sys/kernel/debug/vgaswitcheroo/switch
+else
+	echo "usage: $0 [DIS|IGD]"
+	cat /sys/kernel/debug/vgaswitcheroo/switch
+	echo shutting down unused card
+	echo "OFF"  > /sys/kernel/debug/vgaswitcheroo/switch
+	cat /sys/kernel/debug/vgaswitcheroo/switch
+fi
+
