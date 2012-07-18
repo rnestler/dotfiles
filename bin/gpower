@@ -1,5 +1,7 @@
 if [ x == x$1 ]; then
 	echo usage: $0 "[dynpm,low,mid,high]"
+	cat /sys/class/drm/card0/device/power_method
+	cat /sys/class/drm/card0/device/power_profile
 elif [ dynpm == $1 ]; then
 	echo $1 > /sys/class/drm/card0/device/power_method
 else
