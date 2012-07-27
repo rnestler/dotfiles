@@ -1,0 +1,18 @@
+#!/bin/bash
+
+case $1 in
+	bad)
+		iwconfig wlan0 frag 256
+		iwconfig wlan0 rts 1
+		iwconfig wlan0 retry 30
+		;;
+	good)
+		iwconfig wlan0 frag auto
+		iwconfig wlan0 rts auto
+		iwconfig wlan0 retry long 7
+		;;
+	*)
+		echo "usage $0 [bad|good]"
+		;;
+esac
+
