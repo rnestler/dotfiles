@@ -9,7 +9,7 @@ case $1 in
 	good)
 		iwconfig wlan0 frag auto
 		iwconfig wlan0 rts auto
-		iwconfig wlan0 retry long 7
+		iwconfig wlan0 retry 7
 		;;
 	*)
 		echo "usage $0 [bad|good]"
