@@ -104,10 +104,10 @@ ${if_existing /sys/class/hwmon/hwmon2}
  ${color0}Core 2: $alignr$color${hwmon 2 temp 4}°C
  ${color0}Core 3: $alignr$color${hwmon 2 temp 5}°C
  ${color0}GPU:    $alignr$color${hwmon temp 1}°C$else
- ${color0}Core 0: $alignr$color${hwmon 1 temp 2}°C
- ${color0}Core 1: $alignr$color${hwmon 1 temp 3}°C
- ${color0}Core 2: $alignr$color${hwmon 1 temp 4}°C
- ${color0}Core 3: $alignr$color${hwmon 1 temp 5}°C$endif
+ ${color0}Core 0: $alignr$color${hwmon 0 temp 2}°C
+ ${color0}Core 1: $alignr$color${hwmon 0 temp 3}°C
+ ${color0}Core 2: $alignr$color${hwmon 0 temp 4}°C
+ ${color0}Core 3: $alignr$color${hwmon 0 temp 5}°C$endif
 ## Log
 ${font Droid Sans:style=Bold:size=8}${color0}Log${color} $stippled_hr${font}
 ${execpi 60 journalctl|tail -n 6|cut -d" " -f5-}
