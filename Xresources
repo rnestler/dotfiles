@@ -10,7 +10,7 @@ URxvt.scrollTtyKeypress: true
 !URxvt.shading: 30
 URxvt.depth: 32
 URxvt.background: rgba:1000/1000/1000/dddd
-URxvt.foreground: rgba:0000/F000/F000/FFFF
+URxvt.foreground: rgba:F000/F000/F000/FFFF
 URxvt.font: xft:Bitstream Vera Sans Mono:size=10
 
 !URxvt.tabbed.scrollBar: false
