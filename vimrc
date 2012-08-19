@@ -13,6 +13,8 @@ set incsearch
 
 set wildmode=longest,list,full
 
+set completeopt=longest,menu,preview
+
 au BufRead /tmp/mutt-* set tw=72
 
 filetype plugin indent on
