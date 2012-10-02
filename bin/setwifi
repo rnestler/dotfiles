@@ -1,10 +1,15 @@
 #!/bin/bash
 
 case $1 in
-	bad)
+	worse)
 		iwconfig wlan0 frag 256
-		iwconfig wlan0 rts 1
 		iwconfig wlan0 retry 30
+		iwconfig wlan0 rts 1
+		;;
+	bad)
+		iwconfig wlan0 frag 1024
+		iwconfig wlan0 retry 30
+		iwconfig wlan0 rts auto
 		;;
 	good)
 		iwconfig wlan0 frag auto
@@ -12,7 +17,7 @@ case $1 in
 		iwconfig wlan0 retry 7
 		;;
 	*)
-		echo "usage $0 [bad|good]"
+		echo "usage $0 [good|bad|worse]"
 		;;
 esac
 
