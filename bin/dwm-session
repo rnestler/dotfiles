@@ -3,6 +3,7 @@ nm-applet &
 urxvtd -q -o -f &
 xcompmgr &
 setxauth &
+/usr/lib/notification-daemon-1.0/notification-daemon &
 while true; do
 	xsetroot -name "$(date '+%F %R')"
 	sleep 60
