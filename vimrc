@@ -15,6 +15,8 @@ set wildmode=longest,list,full
 
 set completeopt=longest,menu,preview
 
+cmap w!! %!sudo tee > /dev/null %
+
 au BufRead /tmp/mutt-* set tw=72
 
 filetype plugin indent on
