@@ -3,7 +3,7 @@
 # ~/.xinitrc
 #
 
-DEFAULT_SESSION=awesome
+xrdb -merge ~/.Xresources
 
 case $1 in
 gnome)
@@ -12,9 +12,12 @@ gnome)
 xfce4)
 	exec startxfce4
 	;;
+dwm)
+	exec /usr/bin/dwm-session
+	;;
 *)
 	export $(gnome-keyring-daemon -s -c pkcs11,secrets,ssh,gpg)
-	exec $DEFAULT_SESSION
+	exec awesome
 	;;
 esac
 
