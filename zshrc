@@ -19,5 +19,8 @@ alias :q=exit
 export WINEARCH=win32 # default to win32
 export BROWSER=firefox
 
+echo "ToDo's:"
+cat ~/SparkleShare/Documents/todos
 cat ~/SparkleShare/Documents/Termine.txt
+cat ~/SparkleShare/Documents/notes.txt
 mycal
