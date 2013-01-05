@@ -58,7 +58,6 @@ color2 white
 #show_graph_range no
 
 TEXT
-#${color0}${scroll 41 $nodename - $sysname $kernel on $machine | }
 ${color0}$nodename - $sysname $kernel on $machine
 $hr
  ${color0}Uptime:    $color $uptime
@@ -70,19 +69,20 @@ $hr
 ## Filesystems
 ${color0}${font Droid Sans:style=Bold:size=8}File systems $color$stippled_hr$font
  /     $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
- /home $color${fs_used /home}/${fs_size /home} ${fs_bar 6 /home}
+ /home $color${fs_used /home}/${fs_size /home}   ${fs_bar 6 /home}
 ## Networking
 ${color0}${font Droid Sans:style=Bold:size=8}Networking $color$stippled_hr$font
+${if_up net1} ${color0}net1 Up:$color ${upspeed net1} ${color0} - Down:$color ${downspeed net1}$endif
 ${if_up eth0} ${color0}eth0 Up:$color ${upspeed eth0} ${color0} - Down:$color ${downspeed eth0}$endif
 ${if_up wlan0} ${color0}Up:$color ${upspeed wlan0} ${color0} - Down:$color ${downspeed wlan0}$endif
 ############
 ## - MPD - #
 ############
-${voffset  10}${font Droid Sans:style=Bold:size=8}${color0}MPD${color} $stippled_hr${font}
+#${voffset  10}${font Droid Sans:style=Bold:size=8}${color0}MPD${color} $stippled_hr${font}
 #$color$mpd_smart $color2from$color $mpd_album$color
- ${scroll 41 2 $mpd_smart$color2 from$color $mpd_album}
- ${mpd_bar 5}
- ${mpd_elapsed}/${mpd_length} - S:${mpd_random} R:${mpd_repeat} ${mpd_vol}/100 ${alignr}[${mpd_status}]
+# ${scroll 41 2 $mpd_smart$color2 from$color $mpd_album}
+# ${mpd_bar 5}
+# ${mpd_elapsed}/${mpd_length} - S:${mpd_random} R:${mpd_repeat} ${mpd_vol}/100 ${alignr}[${mpd_status}]
 ## TOP
 ${voffset -0}${font Droid Sans:style=Bold:size=8}${color0}TOP${color} $stippled_hr${font}
 ${color0}Cpu load:
@@ -110,7 +110,7 @@ ${if_existing /sys/class/hwmon/hwmon2}
  ${color0}Core 3: $alignr$color${hwmon 0 temp 5}°C$endif
 ## Log
 ${font Droid Sans:style=Bold:size=8}${color0}Log${color} $stippled_hr${font}
-${execpi 60 journalctl|tail -n 6|cut -d" " -f5-}
+${execpi 60 journalctl -b -p 5|tail -n 6|cut -d" " -f5-}
 ${font Droid Sans:style=Bold:size=8}${color0}Weather${color} $stippled_hr${font}
  ${execpi 300 weather.sh}
 ${font Droid Sans:style=Bold:size=8}${color0}Rss${color} $stippled_hr${font}
