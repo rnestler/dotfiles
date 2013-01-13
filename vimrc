@@ -21,8 +21,12 @@ au BufRead /tmp/mutt-* set tw=72
 
 filetype plugin indent on
 set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
+let g:Tex_Flavor = 'latex'
 let g:Tex_DefaultTargetFormat='pdf'
+"let g:Tex_CompileRule_pdf = 'latexmk -pdf $*'
+let g:Tex_UseMakefile=1
+let g:Tex_SmartKeyDot=0
+let g:Tex_SmartKeyQuote=0
 
 let g:EclimProjectTreeAutoOpen=1
 let g:EclimProjectTreeExpandPathOnOpen=1
