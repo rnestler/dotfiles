@@ -1,0 +1,18 @@
+#!/bin/bash
+
+case $1 in
+	on)
+		xset +dpms
+		xset s default
+		xset s on
+		;;
+	off)
+		xset -dpms
+		xset s noblank
+		xset s off
+		;;
+	*)
+		echo "usage $0 [on|off]"
+		;;
+esac
+
