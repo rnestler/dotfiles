@@ -20,7 +20,10 @@ export WINEARCH=win32 # default to win32
 export BROWSER=firefox
 
 echo "ToDo's:"
+year=$(date +%Y)
+month=$(date +%m)
+nmonth=$(printf "%02d" $(($month+1)))
 cat ~/SparkleShare/Documents/todos
-cat ~/SparkleShare/Documents/Termine.txt
+egrep ($year-$month|$year-$nmonth) ~/SparkleShare/Documents/Termine.txt
 cat ~/SparkleShare/Documents/notes.txt
 mycal
