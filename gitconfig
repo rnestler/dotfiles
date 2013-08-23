@@ -3,3 +3,5 @@
 	email = raphael.nestler@gmail.com
 [push]
 	default = simple
+[color]
+	diff = true
