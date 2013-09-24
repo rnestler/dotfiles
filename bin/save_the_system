@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $1x == --chrootx ]; then
+	pacman -S          $(pacman -Qe --native|awk '{print $1}')
+	pacman -S --asdeps $(pacman -Qd --native|awk '{print $1}')
+else
+	pacman --cachedir /mnt/var/cache/pacman/pkg --root /mnt/ --config /mnt/etc/pacman.conf -S \
+		         $(pacman -Qe --root /mnt/ --config /mnt/etc/pacman.conf --native|awk '{print $1}')
+	pacman --cachedir /mnt/var/cache/pacman/pkg --root /mnt/ --config /mnt/etc/pacman.conf -S \
+		--asdeps $(pacman -Qd --root /mnt/ --config /mnt/etc/pacman.conf --native|awk '{print $1}')
+fi
