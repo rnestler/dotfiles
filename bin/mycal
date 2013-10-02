@@ -1,8 +1,13 @@
 #!/bin/zsh
 
 date=$(date +%Y-%m-%d) 
+
+if [ "x$1" = "xmonth" ]; then
+	date=$(date +%Y-%m)
+fi
+
 check=$(grep $date ~/SparkleShare/Documents/Termine.txt)
 if [ "x$check" != "x" ];  then
-	notify-send Reminder "$(echo $check | cut -f2)"
+	notify-send Reminder "$(echo $check | cut -f1,2)"
 fi
-	
+
