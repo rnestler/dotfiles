@@ -13,6 +13,33 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 
 export PATH=$PATH:~/bin
+zmodload zsh/pcre
+
+activatevirtualenv() {
+	if [ -n "$VIRTUAL_ENV" ]; then
+		if [[ ! $PWD -pcre-match "^$VIRTUAL_ENV.*" ]]; then
+			print "Deactivating virtualenv"
+			deactivate
+		fi
+	else
+		if [[ -f ./bin/activate ]]; then
+			print "Activating virtualenv"
+			. bin/activate
+		fi
+	fi
+}
+
+cd() {
+	if (( ${#argv} == 1 )) && [[ -f ${1} ]]; then
+		[[ ! -e ${1:h} ]] && return 1
+		print "Correcting ${1} to ${1:h}"
+		builtin cd ${1:h}
+		activatevirtualenv
+	else
+		builtin cd "$@"
+		activatevirtualenv
+	fi
+}
 
 alias :q=exit
 
