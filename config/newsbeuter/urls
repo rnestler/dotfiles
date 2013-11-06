@@ -1,17 +1,19 @@
-http://feeds.feedburner.com/Phoronix
-http://www.archlinux.org/feeds/news/
-http://planet.archlinux.org/rss20.xml
-http://ibash.de/neueste-zitate.xml
-http://feeds2.feedburner.com/gbo-zitate
+http://feeds.feedburner.com/Phoronix news
+http://www.archlinux.org/feeds/news/ news
+http://planet.archlinux.org/rss20.xml news
+
+http://ibash.de/neueste-zitate.xml fun
+http://feeds2.feedburner.com/gbo-zitate fun
+http://what-if.xkcd.com/feed.atom fun
+https://xkcd.com/atom.xml comic
+http://www.questionablecontent.net/QCRSS.xml comic
+http://feeds.feedburner.com/uclick/calvinandhobbes?format=xml comic
+http://feeds.feedburner.com/smbc-comics/PvLb comic
+
 http://seclists.org/rss/bugtraq.rss
-http://what-if.xkcd.com/feed.atom
-https://xkcd.com/atom.xml
-http://www.questionablecontent.net/QCRSS.xml
-http://feeds.feedburner.com/uclick/calvinandhobbes?format=xml
-http://feeds.feedburner.com/smbc-comics/PvLb
 http://apod.nasa.gov/apod.rss
 http://www.piraten-partei.ch/rss.xml
 http://feedproxy.google.com/distrowatch/BFai
-http://blogs.valvesoftware.com/feed/?cat=7
-http://whatshouldwecallengineering.tumblr.com/rss
-http://youmightbeanengineeringstudentif.tumblr.com/rss
+http://blogs.valvesoftware.com/feed/?cat=7 news
+http://whatshouldwecallengineering.tumblr.com/rss fun
+http://youmightbeanengineeringstudentif.tumblr.com/rss fun
