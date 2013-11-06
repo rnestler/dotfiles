@@ -1,0 +1,26 @@
+#!/bin/bash
+
+function cleanup()
+{
+	echo cleanup
+	rmdir /run/user/$UID/newsbeuternotify.lock
+	rm "$tmp"
+	exit
+}
+
+mkdir /run/user/$UID/newsbeuternotify.lock || exit 1
+trap "cleanup" EXIT
+
+tmp=$(mktemp /tmp/newsbeuter.XXXXXX)
+echo $tmp
+
+
+while true; do
+	unread=$(newsbeuter -x reload print-unread)
+	if [ "$unread"x != "$(cat $tmp)x" ]; then
+		echo "$unread" > "$tmp"
+		notify-send newsbeuter "$unread"
+	fi
+	sleep 600
+done
+
