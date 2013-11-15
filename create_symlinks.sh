@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function createSymlink {
 	if [ -e ~/$2 ]; then
