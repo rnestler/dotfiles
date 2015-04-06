@@ -1,20 +1,22 @@
 #!/bin/bash
 
+device=wlp3s0
+
 case $1 in
 	worse)
-		iwconfig wlan0 frag 256
-		iwconfig wlan0 retry 30
-		iwconfig wlan0 rts 1
+		iwconfig $device frag 256
+		iwconfig $device retry 30
+		iwconfig $device rts 1
 		;;
 	bad)
-		iwconfig wlan0 frag 1024
-		iwconfig wlan0 retry 30
-		iwconfig wlan0 rts auto
+		iwconfig $device frag 1024
+		iwconfig $device retry 30
+		iwconfig $device rts auto
 		;;
 	good)
-		iwconfig wlan0 frag auto
-		iwconfig wlan0 rts auto
-		iwconfig wlan0 retry 7
+		iwconfig $device frag auto
+		iwconfig $device retry 7
+		iwconfig $device rts auto
 		;;
 	*)
 		echo "usage $0 [good|bad|worse]"
