@@ -1,3 +1,19 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'phildawes/racer'
+Plugin 'scrooloose/syntastic'
+
+filetype plugin indent on
+
+let $RUST_SRC_PATH="/home/roughl/proggen/projects/rust/src"
+let g:racer_cmd = "/usr/bin/racer"
+
 syntax enable
 set bg=dark
 set number
@@ -19,7 +35,6 @@ cmap w!! %!sudo tee > /dev/null %
 
 au BufRead /tmp/mutt-* set tw=72
 
-filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:Tex_Flavor = 'latex'
 let g:Tex_DefaultTargetFormat='pdf'
