@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-IN="LVDS1"
-EXT="VGA1"
+IN="eDP1"
+EXT="HDMI1"
 
 export DISPLAY=:0
 
@@ -15,5 +15,4 @@ if [ $USER == roughl ]; then
 else
 	su roughl -c "$0"
 fi
-
 
