@@ -30,4 +30,5 @@ function setupFolder {
 
 setupFolder bin bin
 setupFolder config .config
+setupFolder weechat .weechat
 
