@@ -27,6 +27,8 @@ set ignorecase
 set smartcase
 set incsearch
 
+set hlsearch
+
 set wildmode=longest,list,full
 
 set completeopt=longest,menu,preview
