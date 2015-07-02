@@ -8,6 +8,10 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'phildawes/racer'
 Plugin 'scrooloose/syntastic'
+Plugin 'rust-lang/rust.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
 
 filetype plugin indent on
 
