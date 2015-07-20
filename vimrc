@@ -38,6 +38,7 @@ set wildmode=longest,list,full
 set completeopt=longest,menu,preview
 
 cmap w!! %!sudo tee > /dev/null %
+map <Leader>m :make run<CR>
 
 au BufRead /tmp/mutt-* set tw=72
 
