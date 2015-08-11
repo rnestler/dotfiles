@@ -28,11 +28,17 @@ set foldmethod=syntax
 set cindent
 set tabstop=4
 set shiftwidth=4
+
+" search config
 set ignorecase
 set smartcase
 set incsearch
-
 set hlsearch
+
+
+" airline config
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
 set wildmode=longest,list,full
 
