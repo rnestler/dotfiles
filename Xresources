@@ -11,7 +11,7 @@ URxvt.scrollTtyKeypress: true
 URxvt.depth: 32
 URxvt.background: rgba:1000/1000/1000/dddd
 URxvt.foreground: rgba:F000/F000/F000/FFFF
-URxvt.font: xft:DejaVu Sans Mono for Powerline:size=12
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=11
 
 URxvt.urgentOnBell: true
 URxvt.fading: 20
