@@ -16,8 +16,6 @@ Plugin 'bling/vim-airline'
 
 filetype plugin indent on
 
-let $RUST_SRC_PATH="/home/roughl/proggen/projects/rust/src"
-let g:racer_cmd = "/usr/bin/racer"
 
 syntax enable
 set bg=dark
@@ -40,6 +38,11 @@ set completeopt=longest,menu,preview
 
 cmap w!! %!sudo tee > /dev/null %
 map <Leader>m :make run<CR>
+
+" rust config
+let $RUST_SRC_PATH="/home/roughl/proggen/projects/rust/src"
+let g:racer_cmd = "/usr/bin/racer"
+autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 
 au BufRead /tmp/mutt-* set tw=72
 
