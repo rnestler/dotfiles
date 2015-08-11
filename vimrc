@@ -16,6 +16,8 @@ Plugin 'bling/vim-airline'
 
 filetype plugin indent on
 
+" syntastic config
+let g:syntastic_aggregate_errors = 1
 
 syntax enable
 set bg=dark
