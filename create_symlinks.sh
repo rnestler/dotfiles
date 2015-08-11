@@ -8,8 +8,12 @@ function createSymlink {
 			echo "WARNING: ~/$2 already exists and is no symlink!"
 		fi
 	else
-		echo "ln -s `pwd`/$1 -> ~/$2"
-		ln -s `pwd`/$1 ~/$2
+		if [ -L ~/$2 ]; then
+			echo "WARNING: ~/$2 is a broken symlink!"
+		else
+			echo "ln -s `pwd`/$1 -> ~/$2"
+			ln -s `pwd`/$1 ~/$2
+		fi
 	fi
 }
 
