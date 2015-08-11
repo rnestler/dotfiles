@@ -7,9 +7,10 @@ call vundle#rc()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'phildawes/racer'
-Plugin 'scrooloose/syntastic'
 Plugin 'rust-lang/rust.vim'
+Plugin 'vim-scripts/errormarker.vim'
 
+Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 
