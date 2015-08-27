@@ -38,6 +38,11 @@ nnoremap <space> za
 set tabstop=4
 set shiftwidth=4
 
+" python config
+autocmd FileType python set foldmethod=indent
+autocmd FileType python set shiftwidth=4
+autocmd FileType python set expandtab
+
 " search config
 set ignorecase
 set smartcase
