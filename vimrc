@@ -10,6 +10,7 @@ Plugin 'phildawes/racer'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-scripts/errormarker.vim'
 
+Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
