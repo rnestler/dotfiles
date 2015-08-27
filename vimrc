@@ -23,10 +23,15 @@ let g:syntastic_aggregate_errors = 1
 syntax enable
 set bg=dark
 set number
+
+" indentation
 set autoindent
+set cindent
+set cinoptions=g0N-s
+
+" folding
 set foldenable
 set foldmethod=syntax
-set cindent
 set tabstop=4
 set shiftwidth=4
 
