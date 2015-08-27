@@ -32,6 +32,9 @@ set cinoptions=g0N-s
 " folding
 set foldenable
 set foldmethod=syntax
+" toggle fold with <space>
+nnoremap <space> za
+
 set tabstop=4
 set shiftwidth=4
 
