@@ -15,6 +15,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 
+Plugin 'kien/ctrlp.vim'
+
 filetype plugin indent on
 
 " syntastic config
