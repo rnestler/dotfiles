@@ -14,6 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'kien/ctrlp.vim'
 
@@ -24,6 +25,7 @@ let g:syntastic_aggregate_errors = 1
 
 syntax enable
 set bg=dark
+colorscheme solarized
 set number
 
 " indentation
