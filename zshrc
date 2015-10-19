@@ -54,3 +54,6 @@ cat ~/SparkleShare/Documents/todos
 egrep ($year-$month|$year-$nmonth) ~/SparkleShare/Documents/Termine.txt
 cat ~/SparkleShare/Documents/notes.txt
 mycal
+
+source ~/.aliases
+
