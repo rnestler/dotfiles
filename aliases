@@ -1,7 +1,10 @@
 # git aliases
 alias gitc="git commit"
 alias gits="git status"
+alias gitd="git diff"
 alias gita="git add"
-alias gitf="git fetch --prune"
+alias gitco="git checkout"
 alias gitp="git pull --ff-only"
+alias gitf="git fetch --prune"
 alias gitb="git branch"
+alias gitl="git log"
