@@ -63,6 +63,10 @@ set wildmode=longest,list,full
 
 set completeopt=longest,menu,preview
 
+let mapleader = "ö"
+map ü [
+map ¨ ]
+
 cmap w!! %!sudo tee > /dev/null %
 map <Leader>m :make run<CR>
 
