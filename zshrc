@@ -55,6 +55,7 @@ egrep ($year-$month|$year-$nmonth) ~/SparkleShare/Documents/Termine.txt
 cat ~/SparkleShare/Documents/notes.txt
 mycal
 
+zstyle ':prompt:grml:*:items:user' pre '%F{blue}'
 eval $(dircolors ~/.dircolors)
 source ~/.aliases
 
