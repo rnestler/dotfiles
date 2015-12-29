@@ -48,6 +48,10 @@ autocmd FileType python set foldmethod=indent
 autocmd FileType python set shiftwidth=4
 autocmd FileType python set expandtab
 
+" yaml config
+autocmd FileType yaml set shiftwidth=2
+autocmd FileType yaml set expandtab
+
 " search config
 set ignorecase
 set smartcase
