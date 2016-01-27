@@ -83,6 +83,9 @@ autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 " Recognize .md files as Markdown instead of modula2
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
+" Recognize .ino files as cpp
+autocmd BufRead,BufNewFile *.ino set filetype=cpp
+
 au BufRead /tmp/mutt-* set tw=72
 
 set grepprg=grep\ -nH\ $*
