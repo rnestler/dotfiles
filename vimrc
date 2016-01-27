@@ -80,6 +80,9 @@ let $RUST_SRC_PATH="/home/roughl/proggen/projects/rust/src"
 let g:racer_cmd = "/usr/bin/racer"
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 
+" Recognize .md files as Markdown instead of modula2
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
 au BufRead /tmp/mutt-* set tw=72
 
 set grepprg=grep\ -nH\ $*
