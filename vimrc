@@ -59,6 +59,8 @@ set smartcase
 set incsearch
 set hlsearch
 
+" insert current filename without extension with \fn
+inoremap \fn <C-R>=expand("%:t:r")<CR>
 
 " airline config
 set laststatus=2
