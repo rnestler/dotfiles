@@ -15,32 +15,6 @@ bindkey -e
 export PATH=$PATH:~/bin
 zmodload zsh/pcre
 
-activatevirtualenv() {
-	if [ -n "$VIRTUAL_ENV" ]; then
-		if [[ ! $PWD -pcre-match "^$VIRTUAL_ENV.*" ]]; then
-			print "Deactivating virtualenv"
-			deactivate
-		fi
-	else
-		if [[ -f ./bin/activate ]]; then
-			print "Activating virtualenv"
-			. bin/activate
-		fi
-	fi
-}
-
-cd() {
-	if (( ${#argv} == 1 )) && [[ -f ${1} ]]; then
-		[[ ! -e ${1:h} ]] && return 1
-		print "Correcting ${1} to ${1:h}"
-		builtin cd ${1:h}
-		activatevirtualenv
-	else
-		builtin cd "$@"
-		activatevirtualenv
-	fi
-}
-
 alias :q=exit
 
 export WINEARCH=win32 # default to win32
@@ -66,4 +40,10 @@ zstyle ':prompt:grml:*:items:user' pre '%F{blue}'
 
 eval $(dircolors ~/.dircolors)
 source ~/.aliases
+
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+	export WORKON_HOME=$HOME/.virtualenvs
+	export PROJECT_HOME=$HOME/proggen
+	source /usr/bin/virtualenvwrapper.sh
+fi
 
