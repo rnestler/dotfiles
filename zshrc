@@ -55,7 +55,15 @@ egrep ($year-$month|$year-$nmonth) ~/SparkleShare/Documents/Termine.txt
 cat ~/SparkleShare/Documents/notes.txt
 mycal
 
+function virtual_env_prompt () {
+	REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
+}
+
+grml_theme_add_token virtual-env -f virtual_env_prompt '%F{magenta}' '%f'
+zstyle ':prompt:grml:left:setup' items \
+	rc virtual-env change-root user at host path vcs percent
 zstyle ':prompt:grml:*:items:user' pre '%F{blue}'
+
 eval $(dircolors ~/.dircolors)
 source ~/.aliases
 
