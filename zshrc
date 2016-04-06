@@ -41,6 +41,10 @@ zstyle ':prompt:grml:*:items:user' pre '%F{blue}'
 eval $(dircolors ~/.dircolors)
 source ~/.aliases
 
+if [ -x /usr/bin/thefuck ]; then
+	eval "$(/usr/bin/thefuck --alias)"
+fi
+
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
 	export WORKON_HOME=$HOME/.virtualenvs
 	export PROJECT_HOME=$HOME/proggen
