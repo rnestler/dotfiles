@@ -6,12 +6,15 @@ call vundle#rc()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'phildawes/racer'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-scripts/errormarker.vim'
 
 Plugin 'scrooloose/nerdtree'
+
 Plugin 'scrooloose/syntastic'
+
+Plugin 'Valloric/YouCompleteMe'
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
@@ -75,9 +78,13 @@ map ¨ ]
 cmap w!! %!sudo tee > /dev/null %
 map <Leader>m :make run<CR>
 
+" YCM config
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_python_binary_path = '/usr/bin/python2'
+let g:ycm_rust_src_path = '/home/roughl/proggen/projects/rust/src'
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+
 " rust config
-let $RUST_SRC_PATH="/home/roughl/proggen/projects/rust/src"
-let g:racer_cmd = "/usr/bin/racer"
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 
 " Recognize .md files as Markdown instead of modula2
