@@ -41,17 +41,15 @@ set foldmethod=syntax
 " toggle fold with <space>
 nnoremap <space> za
 
-set tabstop=4
-set shiftwidth=4
+" Default indentation config
+set tabstop=4 shiftwidth=4 expandtab
 
 " python config
-autocmd FileType python set foldmethod=indent
-autocmd FileType python set shiftwidth=4
-autocmd FileType python set expandtab
+autocmd FileType python set foldmethod=indent sw=4 expandtab
 
 " yaml config
-autocmd FileType yaml set shiftwidth=2
-autocmd FileType yaml set expandtab
+autocmd FileType yaml set ts=2 sw=2 expandtab
+
 
 " search config
 set ignorecase
