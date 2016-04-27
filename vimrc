@@ -15,6 +15,8 @@ Plugin 'scrooloose/syntastic'
 
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'elzr/vim-json'
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
