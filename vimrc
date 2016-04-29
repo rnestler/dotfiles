@@ -37,8 +37,6 @@ set number
 
 " indentation
 set autoindent
-set cindent
-set cinoptions=g0N-s
 
 " folding
 set foldenable
@@ -55,6 +53,8 @@ autocmd FileType python set foldmethod=indent sw=4 expandtab
 " yaml config
 autocmd FileType yaml set ts=2 sw=2 expandtab
 
+" C / C++ config
+autocmd FileType c,cpp set cindent cinoptions=g0N-s
 
 " search config
 set ignorecase
