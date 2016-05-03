@@ -23,6 +23,8 @@ Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'editorconfig/editorconfig-vim'
 
+Plugin 'easymotion/vim-easymotion'
+
 Plugin 'kien/ctrlp.vim'
 
 filetype plugin indent on
