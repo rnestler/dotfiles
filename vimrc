@@ -27,6 +27,8 @@ Plugin 'easymotion/vim-easymotion'
 
 Plugin 'kien/ctrlp.vim'
 
+Plugin 'vim-scripts/Conque-GDB'
+
 filetype plugin indent on
 
 " syntastic config
