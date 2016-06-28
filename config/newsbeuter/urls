@@ -7,6 +7,7 @@ http://rnestler.github.io/feeds/all.atom.xml blog
 https://blog.dbrgn.ch/feed.atom blog
 http://blog.rust-lang.org/feed.xml blog rust
 http://blog.piston.rs/atom.xml blog rust
+https://this-week-in-rust.org/atom.xml blog rust
 
 http://ibash.de/neueste-zitate.xml fun
 http://feeds2.feedburner.com/gbo-zitate fun
