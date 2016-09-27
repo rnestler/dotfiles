@@ -58,7 +58,7 @@ autocmd FileType python set foldmethod=indent sw=4 expandtab
 autocmd FileType yaml set ts=2 sw=2 expandtab
 
 " C / C++ config
-autocmd FileType c,cpp set cindent cinoptions=g0N-s
+autocmd FileType c,cpp set cindent cinoptions=g0N-s comments^=:///
 
 " search config
 set ignorecase
