@@ -9,6 +9,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-scripts/errormarker.vim'
 
+Plugin 'mileszs/ack.vim'
+
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'scrooloose/syntastic'
@@ -65,6 +67,10 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " insert current filename without extension with \fn
 inoremap \fn <C-R>=expand("%:t:r")<CR>
