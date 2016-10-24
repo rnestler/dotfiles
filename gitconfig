@@ -7,3 +7,5 @@
 	diff = true
 [credential]
 	helper = cache
+[rebase]
+	autosquash = true
