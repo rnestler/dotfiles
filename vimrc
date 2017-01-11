@@ -40,6 +40,7 @@ syntax enable
 set bg=dark
 colorscheme solarized
 set number
+set colorcolumn=81,101
 
 " indentation
 set autoindent
