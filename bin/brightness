@@ -1,0 +1,17 @@
+#!/bin/bash
+
+brightness_dev=/sys/class/backlight/intel_backlight/brightness
+
+case $1 in
+    max)
+        sudo bash -c "echo 1054 > $brightness_dev"
+        ;;
+    min)
+        sudo bash -c "echo 1 > $brightness_dev"
+        ;;
+    [0-9]*)
+        sudo bash -c "echo $1 > $brightness_dev"
+        ;;
+    *)
+        echo "usage $0 [min|max|<brightness>]"
+esac
