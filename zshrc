@@ -51,6 +51,11 @@ if [ -f /usr/bin/virtualenvwrapper.sh ]; then
 	source /usr/bin/virtualenvwrapper.sh
 fi
 
+if [ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]; then
+    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+fi
+
+
 if [ -f /usr/share/autojump/autojump.zsh ]; then
     source /usr/share/autojump/autojump.zsh
 fi
