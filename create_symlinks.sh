@@ -36,3 +36,9 @@ setupFolder bin bin
 setupFolder config .config
 setupFolder weechat .weechat
 
+if [ -e ~/.vim/bundle/Vundle.vim ]; then
+    echo "Vundle.vim already exits"
+else
+    mkdir -p ~/.vim/bundle/
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
