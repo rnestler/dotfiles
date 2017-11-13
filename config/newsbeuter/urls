@@ -1,11 +1,11 @@
-http://feeds.feedburner.com/Phoronix news
-http://www.archlinux.org/feeds/news/ news
-http://planet.archlinux.org/rss20.xml news
+https://feeds.feedburner.com/Phoronix news
+https://www.archlinux.org/feeds/news/ news
+https://planet.archlinux.org/rss20.xml news
 
 http://0pointer.net/blog/index.atom blog
-http://rnestler.github.io/feeds/all.atom.xml blog
+https://rnestler.github.io/feeds/all.atom.xml blog
 https://blog.dbrgn.ch/feed.atom blog
-http://blog.rust-lang.org/feed.xml blog rust
+https://blog.rust-lang.org/feed.xml blog rust
 http://blog.piston.rs/atom.xml blog rust
 https://this-week-in-rust.org/atom.xml blog rust
 https://github.com/blog/all.atom blog
@@ -18,16 +18,16 @@ https://www.coredump.ch/feed/ blog
 http://lightning.community/feed.xml blog bitcoin lightning
 
 http://ibash.de/neueste-zitate.xml fun
-http://feeds2.feedburner.com/gbo-zitate fun
-http://what-if.xkcd.com/feed.atom fun
+https://feeds2.feedburner.com/gbo-zitate fun
+https://what-if.xkcd.com/feed.atom fun
 https://xkcd.com/atom.xml comic
-http://www.questionablecontent.net/QCRSS.xml comic
-http://feeds.feedburner.com/uclick/calvinandhobbes?format=xml comic
-http://www.smbc-comics.com/rss.php comic
+https://www.questionablecontent.net/QCRSS.xml comic
+https://feeds.feedburner.com/uclick/calvinandhobbes?format=xml comic
+https://www.smbc-comics.com/rss.php comic
 
 http://seclists.org/rss/bugtraq.rss
-http://apod.nasa.gov/apod.rss
+https://apod.nasa.gov/apod.rss
 https://www.piratenpartei.ch/feed/
-http://feedproxy.google.com/distrowatch/BFai
-http://whatshouldwecallengineering.tumblr.com/rss fun
-http://youmightbeanengineeringstudentif.tumblr.com/rss fun
+https://feedproxy.google.com/distrowatch/BFai
+https://whatshouldwecallengineering.tumblr.com/rss fun
+https://youmightbeanengineeringstudentif.tumblr.com/rss fun
