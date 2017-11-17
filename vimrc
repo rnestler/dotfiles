@@ -53,6 +53,7 @@ nnoremap <space> za
 
 " Default indentation config
 set tabstop=4 shiftwidth=4 expandtab
+set nojoinspaces
 
 " python config
 autocmd FileType python set foldmethod=indent sw=4 expandtab
