@@ -19,6 +19,8 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'elzr/vim-json'
 
+Plugin 'ElmCast/elm-vim'
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
