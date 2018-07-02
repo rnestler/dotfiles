@@ -42,3 +42,13 @@ else
     mkdir -p ~/.vim/bundle/
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
+
+mkdir -p ~/projects
+
+if [ -e ~/projects/fonts ]; then
+    echo "Powerline fonts already here"
+else
+    cd ~/projects
+    git clone https://github.com/powerline/fonts.git
+    cd ~/projects
+fi
