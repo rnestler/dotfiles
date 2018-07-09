@@ -59,3 +59,8 @@ fi
 if [ -f /usr/share/autojump/autojump.zsh ]; then
     source /usr/share/autojump/autojump.zsh
 fi
+
+if [ -d /usr/share/fzf/ ]; then
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/fzf/key-bindings.zsh
+fi
