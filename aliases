@@ -8,3 +8,5 @@ alias gitp="git pull --ff-only"
 alias gitf="git fetch --all --prune"
 alias gitb="git branch"
 alias gitl="git log"
+alias gitt="git tag -a"
+alias gitpn='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
