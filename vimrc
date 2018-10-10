@@ -43,6 +43,7 @@ set bg=dark
 colorscheme solarized
 set number
 set colorcolumn=81,101
+set tabpagemax=50
 
 " indentation
 set autoindent
