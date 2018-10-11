@@ -63,6 +63,8 @@ fi
 if [ -d /usr/share/fzf/ ]; then
     source /usr/share/fzf/completion.zsh
     source /usr/share/fzf/key-bindings.zsh
+elif [ -f ~/.fzf.zsh ]; then
+    source ~/.fzf.zsh
 fi
 
 if [ -f ~/.profile ]; then
