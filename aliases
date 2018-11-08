@@ -11,5 +11,10 @@ alias gitl="git log"
 alias gitt="git tag -a"
 alias gitpn='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
-alias big="printf '\e]710;%s\007' \"xft:DejaVu Sans Mono for Powerline:size=16\""
-alias small="printf '\e]710;%s\007' \"xft:DejaVu Sans Mono for Powerline:size=11\""
+fsize () {
+    printf '\e]710;%s\007' "xft:DejaVu Sans Mono for Powerline:size=$1"
+}
+
+alias huge="fsize 20"
+alias big="fsize 16"
+alias small="fsize 11"
