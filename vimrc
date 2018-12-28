@@ -117,6 +117,9 @@ autocmd BufRead, BufNewFile *.ipynb set filetype=json
 
 au BufRead /tmp/mutt-* set tw=72
 
+" no swap files for gopass files
+au BufNewFile,BufRead /dev/shm/gopass.* setlocal noswapfile nobackup noundofile
+
 set grepprg=grep\ -nH\ $*
 let g:Tex_Flavor = 'latex'
 let g:Tex_DefaultTargetFormat='pdf'
