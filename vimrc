@@ -105,6 +105,7 @@ nnoremap <leader>g :YcmCompleter GoTo<CR>
 
 " rust config
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
+let g:rustfmt_autosave = 1
 
 " Recognize .md files as Markdown instead of modula2
 autocmd BufRead,BufNewFile *.md set filetype=markdown
