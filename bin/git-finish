@@ -6,4 +6,5 @@ current_branch=$(git rev-parse --abbrev-ref HEAD)
 git fetch --all --prune
 git rebase -i origin/master
 git checkout master
+git pull
 git branch -d "${current_branch}"
