@@ -12,3 +12,17 @@ auto-reload yes
 reload-time 20
 
 max-items 1000
+
+# solarized
+color background         default   default
+color listnormal         default   default
+color listnormal_unread  default   default
+color listfocus          black     cyan     bold
+color listfocus_unread   black     cyan     bold
+color info               default   black
+color article            default   default
+
+# highlights
+highlight article "^(Title):.*$" blue default
+highlight article "https?://[^ ]+" red default
+highlight article "\\[image\\ [0-9]+\\]" green default
