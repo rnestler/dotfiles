@@ -52,3 +52,10 @@ else
     git clone https://github.com/powerline/fonts.git
     cd ~/projects
 fi
+
+mkdir -p ~/projects/archpkg/
+if [ -e ~/projects/archpkg/yay ]; then
+    echo "yay archpkg already here"
+else
+    (cd ~/projects/archpkg && git clone https://aur.archlinux.org/yay.git)
+fi
