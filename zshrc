@@ -30,25 +30,25 @@ cat ~/SparkleShare/Documents/notes.txt
 mycal
 
 function virtual_env_prompt () {
-	REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
+    REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
 }
 
 grml_theme_add_token virtual-env -f virtual_env_prompt '%F{magenta}' '%f'
 zstyle ':prompt:grml:left:setup' items \
-	rc virtual-env change-root user at host path vcs percent
+    rc virtual-env change-root user at host path vcs percent
 zstyle ':prompt:grml:*:items:user' pre '%F{blue}'
 
 eval $(dircolors ~/.dircolors)
 source ~/.aliases
 
 if [ -x /usr/bin/thefuck ]; then
-	eval "$(/usr/bin/thefuck --alias)"
+    eval "$(/usr/bin/thefuck --alias)"
 fi
 
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
-	export WORKON_HOME=$HOME/.virtualenvs
-	export PROJECT_HOME=$HOME/proggen
-	source /usr/bin/virtualenvwrapper.sh
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/proggen
+    source /usr/bin/virtualenvwrapper.sh
 fi
 
 if [ -f /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh ]; then
