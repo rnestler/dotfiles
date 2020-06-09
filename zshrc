@@ -55,9 +55,9 @@ if [ -f /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh ]; then
     source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
 fi
 
-
-if [ -f /usr/share/autojump/autojump.zsh ]; then
-    source /usr/share/autojump/autojump.zsh
+if [ -f ~/projects/github/z/z.sh ]; then
+    export _Z_CMD=j
+    source ~/projects/github/z/z.sh
 fi
 
 if [ -d /usr/share/fzf/ ]; then
@@ -65,6 +65,12 @@ if [ -d /usr/share/fzf/ ]; then
     source /usr/share/fzf/key-bindings.zsh
 elif [ -f ~/.fzf.zsh ]; then
     source ~/.fzf.zsh
+fi
+
+if [ -f ~/projects/github/fz/fz.sh ]; then
+    export FZ_CMD=j
+    export FZ_SUBDIR_CMD=jj
+    source ~/projects/github/fz/fz.sh
 fi
 
 if [ -f ~/.profile ]; then
