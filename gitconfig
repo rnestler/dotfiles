@@ -9,3 +9,5 @@
 	helper = cache
 [rebase]
 	autosquash = true
+[pull]
+	ff = only
