@@ -39,7 +39,7 @@ filetype plugin indent on
 let g:syntastic_aggregate_errors = 1
 
 syntax enable
-set bg=dark
+set bg=light
 colorscheme solarized
 set number
 set colorcolumn=81,101
