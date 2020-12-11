@@ -2,11 +2,12 @@
 
 set -euo pipefail
 
+main_branch=$(git rev-parse --abbrev-ref origin/HEAD|cut -d'/' -f2-)
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 git fetch --all --prune
-git checkout master
+git checkout $main_branch
 git merge --ff-only
 git checkout "${current_branch}"
-git rebase -i master
-git checkout master
+git rebase -i $main_branch
+git checkout $main_branch
 git branch -d "${current_branch}"
