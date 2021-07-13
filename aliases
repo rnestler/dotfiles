@@ -20,3 +20,4 @@ fsize () {
 alias huge="fsize 20"
 alias big="fsize 16"
 alias small="fsize 11"
+alias rab="~/projects/rnestler/reboot-arch-btw/target/debug/reboot-arch-btw"
