@@ -35,6 +35,7 @@ function setupFolder {
 setupFolder bin bin
 setupFolder config .config
 setupFolder weechat .weechat
+setupFolder doom.d .doom.d
 
 if [ -e ~/.vim/bundle/Vundle.vim ]; then
     echo "Vundle.vim already exits"
