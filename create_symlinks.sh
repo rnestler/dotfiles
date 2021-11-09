@@ -40,7 +40,8 @@ setupFolder weechat .weechat
 setupFolder doom.d .doom.d
 
 if [ -e ~/.vim/bundle/Vundle.vim ]; then
-    echo "Vundle.vim already exits"
+    echo "Vundle.vim already exits, updating"
+    git -C ~/.vim/bundle/Vundle.vim pull
 else
     mkdir -p ~/.vim/bundle/
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
