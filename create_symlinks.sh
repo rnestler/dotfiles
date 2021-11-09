@@ -50,7 +50,8 @@ fi
 mkdir -p ~/projects
 
 if [ -e ~/projects/fonts ]; then
-    echo "Powerline fonts already here"
+    echo "Powerline fonts already here, updating"
+    git -C ~/projects/fonts pull
 else
     cd ~/projects
     git clone https://github.com/powerline/fonts.git
