@@ -6,6 +6,23 @@ call vundle#rc()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'jceb/vim-orgmode'
+Plugin 'tpope/vim-speeddating'
+Plugin 'mattn/calendar-vim'
+
+
+"Plugin 'prabirshrestha/async.vim'
+"Plugin 'prabirshrestha/vim-lsp'
+"Plugin 'prabirshrestha/asyncomplete.vim'
+"Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+
+"Plugin 'git@gitlab:rnestler/experiment-data-format.vim.git'
+
+"Plugin 'udalov/kotlin-vim'
+"Plugin 'keith/swift.vim'
+
+Plugin 'peterhoeg/vim-qml'
+
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-scripts/errormarker.vim'
 
@@ -13,13 +30,18 @@ Plugin 'mileszs/ack.vim'
 
 Plugin 'scrooloose/nerdtree'
 
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'kana/vim-operator-user'
+Plugin 'rhysd/vim-clang-format'
 
-Plugin 'elzr/vim-json'
+Plugin 'zxqfl/tabnine-vim'
 
-Plugin 'ElmCast/elm-vim'
+"Plugin 'Valloric/YouCompleteMe'
+
+"Plugin 'elzr/vim-json'
+
+"Plugin 'ElmCast/elm-vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
@@ -31,12 +53,17 @@ Plugin 'easymotion/vim-easymotion'
 
 Plugin 'kien/ctrlp.vim'
 
-Plugin 'vim-scripts/Conque-GDB'
+"Plugin 'vim-scripts/Conque-GDB'
+
+"Plugin 'chrisbra/csv.vim'
 
 filetype plugin indent on
 
 " syntastic config
 let g:syntastic_aggregate_errors = 1
+
+" ctrl-p config
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 syntax enable
 set bg=light
@@ -60,6 +87,7 @@ set nojoinspaces
 
 " python config
 autocmd FileType python set foldmethod=indent sw=4 expandtab
+autocmd FileType Makefile set noexpandtab
 
 " yaml config
 autocmd FileType yaml set ts=2 sw=2 expandtab
@@ -72,6 +100,8 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+
+hi SpellBad term=underline cterm=underline gui=undercurl guisp=Red
 
 if executable('rg')
     let g:ackprg = 'rg --vimgrep'
@@ -100,12 +130,12 @@ map <Leader>m :make run<CR>
 " YCM config
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_python_binary_path = '/usr/bin/python2'
-let g:ycm_rust_src_path = '/home/roughl/proggen/projects/rust/src'
+"let g:ycm_rust_src_path = '/home/roughl/proggen/projects/rust/src'
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 
 " rust config
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
-let g:rustfmt_autosave = 1
+"let g:rustfmt_autosave = 1
 
 " Recognize .md files as Markdown instead of modula2
 autocmd BufRead,BufNewFile *.md set filetype=markdown
@@ -121,6 +151,9 @@ au BufRead /tmp/mutt-* set tw=72
 " no swap files for gopass files
 au BufNewFile,BufRead /dev/shm/gopass.* setlocal noswapfile nobackup noundofile
 
+" org-mode settings
+let g:org_agenda_files=['~/projects/org-todos/todos.org']
+
 set grepprg=grep\ -nH\ $*
 let g:Tex_Flavor = 'latex'
 let g:Tex_DefaultTargetFormat='pdf'
@@ -134,3 +167,4 @@ let g:EclimProjectTreeExpandPathOnOpen=1
 let g:EclimProjectTreeSharedInstance=1
 let g:EclimProjectTreeActions =  [ {'pattern': '.*', 'name': 'Tab', 'action': 'tabnew'} ]
 
+set diffopt+=iwhite
