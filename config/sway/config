@@ -75,8 +75,8 @@ input "type:keyboard" {
     # Close focused window
     bindsym $mod+c kill
 
-    # Start your launcher
-    bindsym $mod+d exec $menu
+    # Run your launcher
+    bindsym $mod+r exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -201,7 +201,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+x mode "resize"
 
 #
 # Status Bar:
