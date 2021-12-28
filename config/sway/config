@@ -215,4 +215,8 @@ bar {
 # Notifications
 exec mako
 
+# Firefox workaround
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1628431
+for_window [title="Firefox — Sharing Indicator"] floating enable;
+
 include /etc/sway/config.d/*
