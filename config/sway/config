@@ -161,6 +161,9 @@ input "type:keyboard" {
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
 
+    # Maximize/Unmaximize current focus by toggle floating and resize to 100%
+    bindsym $mod+m floating toggle; move position center; resize set 100ppt 100ppt
+
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
 
