@@ -52,3 +52,7 @@ fi
 if [ -f ~/.profile ]; then
     source ~/.profile
 fi
+
+if [ -f /opt/asdf-vm/asdf.sh ]; then
+    source /opt/asdf-vm/asdf.sh
+fi
