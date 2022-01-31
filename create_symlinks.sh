@@ -64,3 +64,16 @@ if [ -e ~/projects/archpkg/yay ]; then
 else
     (cd ~/projects/archpkg && git clone https://aur.archlinux.org/yay.git)
 fi
+
+mkdir -p ~/projects/github/
+if [ -e ~/projects/github/z ]; then
+    echo "z already here"
+else
+    (cd ~/projects/github && git clone https://github.com/rupa/z.git )
+fi
+
+if [ -e ~/projects/github/fz ]; then
+    echo "fz already here"
+else
+    (cd ~/projects/github && git clone https://github.com/changyuheng/fz.git )
+fi
