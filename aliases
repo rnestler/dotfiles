@@ -11,7 +11,7 @@ alias gitl="git log"
 alias gitt="git tag -a"
 alias gitpn='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
-alias p='dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause'
+alias p='playerctl play-pause'
 
 fsize () {
     printf '\e]710;%s\007' "xft:DejaVu Sans Mono for Powerline:size=$1"
