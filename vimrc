@@ -33,6 +33,11 @@ Plugin 'kien/ctrlp.vim'
 
 Plugin 'vim-scripts/Conque-GDB'
 
+" Ruby / Rails plugins
+
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rails'
+
 filetype plugin indent on
 
 " syntastic config
