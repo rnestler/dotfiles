@@ -73,6 +73,8 @@ set smartcase
 set incsearch
 set hlsearch
 
+hi SpellBad term=underline cterm=underline gui=undercurl guisp=Red
+
 if executable('rg')
     let g:ackprg = 'rg --vimgrep'
 elseif executable('ag')
