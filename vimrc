@@ -135,9 +135,3 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_UseMakefile=1
 let g:Tex_SmartKeyDot=0
 let g:Tex_SmartKeyQuote=0
-
-let g:EclimProjectTreeAutoOpen=1
-let g:EclimProjectTreeExpandPathOnOpen=1
-let g:EclimProjectTreeSharedInstance=1
-let g:EclimProjectTreeActions =  [ {'pattern': '.*', 'name': 'Tab', 'action': 'tabnew'} ]
-
