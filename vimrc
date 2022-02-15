@@ -15,7 +15,7 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'scrooloose/syntastic'
 
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'tabnine/YouCompleteMe'
 
 Plugin 'elzr/vim-json'
 
