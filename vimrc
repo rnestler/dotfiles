@@ -97,7 +97,7 @@ set wildmode=longest,list,full
 
 set completeopt=longest,menu,preview
 
-let mapleader = "ö"
+let mapleader = ","
 map ü [
 map ¨ ]
 
