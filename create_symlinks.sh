@@ -39,6 +39,13 @@ setupFolder config .config
 setupFolder weechat .weechat
 setupFolder doom.d .doom.d
 
+if [ -e ~/.local/share/nvim/site/autoload/plug.vim ]; then
+    echo "plug.vim alreadys exists"
+else
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
 if [ -e ~/.vim/bundle/Vundle.vim ]; then
     echo "Vundle.vim already exits, updating"
     git -C ~/.vim/bundle/Vundle.vim pull
