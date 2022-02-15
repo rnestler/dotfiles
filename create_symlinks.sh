@@ -34,6 +34,18 @@ function setupFolder {
     done
 }
 
+# $1 git url $2 target
+function cloneOrPull {
+    target_name=$(basename $2)
+    if [ -e "$2" ]; then
+        echo "$target_name already exists, updating"
+        git -C "$2" pull
+    else
+        mkdir -p $(dirname $2)
+        git clone "$1" "$2"
+    fi
+}
+
 setupFolder bin bin
 setupFolder config .config
 setupFolder weechat .weechat
@@ -46,41 +58,8 @@ else
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-if [ -e ~/.vim/bundle/Vundle.vim ]; then
-    echo "Vundle.vim already exits, updating"
-    git -C ~/.vim/bundle/Vundle.vim pull
-else
-    mkdir -p ~/.vim/bundle/
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-fi
-
-mkdir -p ~/projects
-
-if [ -e ~/projects/fonts ]; then
-    echo "Powerline fonts already here, updating"
-    git -C ~/projects/fonts pull
-else
-    cd ~/projects
-    git clone https://github.com/powerline/fonts.git
-    cd ~/projects
-fi
-
-mkdir -p ~/projects/archpkg/
-if [ -e ~/projects/archpkg/yay ]; then
-    echo "yay archpkg already here"
-else
-    (cd ~/projects/archpkg && git clone https://aur.archlinux.org/yay.git)
-fi
-
-mkdir -p ~/projects/github/
-if [ -e ~/projects/github/z ]; then
-    echo "z already here"
-else
-    (cd ~/projects/github && git clone https://github.com/rupa/z.git )
-fi
-
-if [ -e ~/projects/github/fz ]; then
-    echo "fz already here"
-else
-    (cd ~/projects/github && git clone https://github.com/changyuheng/fz.git )
-fi
+cloneOrPull https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cloneOrPull https://github.com/powerline/fonts.git ~/projects/fonts
+cloneOrPull http://aur.archlinux.org/yay.git ~/projects/archpkg/yay
+cloneOrPull https://github.com/rupa/z.git ~/projects/github/z
+cloneOrPull https://github.com/changyuheng/fz.git ~/projects/github/fz
