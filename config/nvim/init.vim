@@ -44,6 +44,7 @@ colorscheme solarized
 
 " airline config
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " telescope config
 nnoremap <C-p> <cmd>Telescope find_files<cr>
