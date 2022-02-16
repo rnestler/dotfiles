@@ -16,6 +16,9 @@ nnoremap <space> za
 " Default indentation config
 set tabstop=4 shiftwidth=4 expandtab
 
+set number
+set colorcolumn=81,101
+
 """ PLUGINS
 call plug#begin(stdpath('data') . '/plugged')
 
