@@ -42,6 +42,9 @@ call plug#end()
 
 colorscheme solarized
 
+" gitgutter config
+let g:gitgutter_highlight_linenrs = 1
+
 " airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
