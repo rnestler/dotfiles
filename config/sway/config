@@ -54,10 +54,10 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 exec swayidle -w \
          timeout 180 'brightnessctl set 50%-' \
               resume 'brightnessctl set 50%+' \
-         timeout 190 'swaymsg "output * dpms off"' \
+         timeout 195 'swaylock --screenshots --effect-pixelate=10  --indicator-idle-visible --fade-in 2 --grace 2 -f' \
+         timeout 200 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
-         timeout 200 'swaylock -c 000000 -f' \
-        before-sleep 'swaylock -c 000000 -f'
+        before-sleep 'swaylock --screenshot --effect-pixelate=10 -f'
 
 ### Input configuration
 #
