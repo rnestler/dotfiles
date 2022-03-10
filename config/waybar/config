@@ -25,6 +25,9 @@
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
+    "sway/window": {
+        "icon": false
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
