@@ -91,6 +91,7 @@ lua <<EOF
         },
         sources = cmp.config.sources({
             { name = 'nvim_lsp' },
+            { name = 'path' },
             { name = 'vsnip' },
         }, {
             { name = 'buffer' },
