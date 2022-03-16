@@ -47,6 +47,8 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'hrsh7th/nvim-cmp'
     Plug 'hrsh7th/vim-vsnip'
 
+    Plug 'simrat39/rust-tools.nvim'
+
 
 " Initialize plugin system
 call plug#end()
@@ -97,6 +99,8 @@ lua <<EOF
             { name = 'buffer' },
         })
     })
+
+    require('rust-tools').setup({})
 
     -- Python autocompletion with pylsp
     require('lspconfig').pylsp.setup({
