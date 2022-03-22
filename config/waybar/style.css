@@ -24,6 +24,10 @@ window#waybar {
     border-bottom: 3px solid white;
 }
 
+#workspaces button.visible {
+    background: #64727D;
+}
+
 #workspaces button.urgent {
     background: #FF727D;
     border-bottom: 3px solid white;
