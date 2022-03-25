@@ -1,4 +1,3 @@
-
 " Enable true color
 set termguicolors
 
@@ -108,12 +107,11 @@ lua <<EOF
     require('lspconfig').pylsp.setup({
       settings = {
           pylsp = {
-              configurationSources = { "pycodestyle" },
+              configurationSources = { "mypy", "black" },
               plugins = {
-                  pycodestyle = {
-                      ignore = { "E124", "E126", "E127", "E128" },
-                      maxLineLength = 99,
-                  },
+                  mypy = { enabled = true },
+                  black = { enabled = true },
+                  pycodestyle = { enabled = false },
               },
           },
       },
