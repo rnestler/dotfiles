@@ -49,6 +49,8 @@ call plug#begin(stdpath('data') . '/plugged')
 
     Plug 'simrat39/rust-tools.nvim'
 
+    Plug 'kyazdani42/nvim-web-devicons' " for file icons
+    Plug 'kyazdani42/nvim-tree.lua'
 
 " Initialize plugin system
 call plug#end()
@@ -116,6 +118,12 @@ lua <<EOF
           },
       },
     })
+
+    require'nvim-web-devicons'.setup {}
+    require'nvim-tree'.setup {
+        open_on_setup        = true,
+        open_on_tab          = true,
+    }
 EOF
 
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
