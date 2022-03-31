@@ -51,6 +51,8 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'kyazdani42/nvim-web-devicons' " for file icons
     Plug 'kyazdani42/nvim-tree.lua'
 
+    Plug 'vim-test/vim-test'
+
 " Initialize plugin system
 call plug#end()
 
@@ -65,6 +67,15 @@ let g:airline_powerline_fonts = 1
 " telescope config
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
+
+" vim-test config
+nmap <silent> <leader>tn :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ta :TestSuite<CR>
+nmap <silent> <leader>tt :TestLast<CR>
+nmap <silent> <leader>tg :TestVisit<CR>
+
+let test#strategy = "neovim"
 
 " Auto completion config
 
