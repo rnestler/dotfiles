@@ -64,7 +64,7 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
-        "format-icons": ["🔅", "🔆"]
+        "format-icons": ["", "", "", "", "", "", ""]
     },
     "battery": {
         "states": {
@@ -83,8 +83,8 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
-        "format-linked": " {ifname} (No IP)",
+        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "format-linked": " {ifname} (No IP)",
         "format-disconnected": "⚠ Offline",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
