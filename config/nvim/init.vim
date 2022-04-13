@@ -10,7 +10,6 @@ set smartcase
 " folding
 set foldenable
 set foldmethod=syntax
-nnoremap <space> za
 
 " Default indentation config
 set tabstop=4 shiftwidth=4 expandtab
@@ -138,3 +137,4 @@ EOF
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gi    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <space>rn <cmd>lua vim.lsp.buf.rename()<CR>
