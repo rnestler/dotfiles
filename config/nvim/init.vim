@@ -80,6 +80,8 @@ let test#strategy = "neovim"
 
 set completeopt=menu,menuone,noselect
 
+let g:nvim_tree_highlight_opened_files = 1
+
 lua <<EOF
     -- Setup nvim-cmp.
     local cmp = require'cmp'
