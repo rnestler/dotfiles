@@ -66,6 +66,7 @@ let g:airline_powerline_fonts = 1
 " telescope config
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
+nnoremap gr <cmd>Telescope lsp_references<cr>
 
 " vim-test config
 nmap <silent> <leader>tn :TestNearest<CR>
