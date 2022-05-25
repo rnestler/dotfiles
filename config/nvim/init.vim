@@ -127,6 +127,8 @@ lua <<EOF
       },
     })
 
+    require'lspconfig'.solargraph.setup{}
+
     require'nvim-web-devicons'.setup {}
     require'nvim-tree'.setup {
         open_on_setup        = true,
