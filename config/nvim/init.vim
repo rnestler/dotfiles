@@ -140,6 +140,8 @@ nnoremap <C-n> :NvimTreeToggle<CR>
 
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD    <cmd>:tab split<CR><cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gi    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> gI    <cmd>:tab split<CR><cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <space>rn      <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> <space><space> <cmd>lua vim.lsp.buf.formatting()<CR>
