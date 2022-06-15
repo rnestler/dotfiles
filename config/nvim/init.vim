@@ -81,8 +81,6 @@ let test#strategy = "neovim"
 
 set completeopt=menu,menuone,noselect
 
-let g:nvim_tree_highlight_opened_files = 1
-
 lua <<EOF
     -- Setup nvim-cmp.
     local cmp = require'cmp'
@@ -133,6 +131,9 @@ lua <<EOF
     require'nvim-tree'.setup {
         open_on_setup        = true,
         open_on_tab          = true,
+        renderer = {
+            highlight_opened_files = "name"
+        }
     }
 EOF
 
