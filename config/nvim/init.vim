@@ -119,6 +119,7 @@ lua <<EOF
               plugins = {
                   mypy = { enabled = true },
                   black = { enabled = true },
+                  isort = { enabled = true },
                   pycodestyle = { enabled = false },
               },
           },
