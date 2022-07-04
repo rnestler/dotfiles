@@ -41,7 +41,7 @@
     },
     "clock": {
         "interval": 5,
-        "tooltip-format": "{:%Y-%m-%d | %H:%M:%S}",
+        "tooltip-format": "{calendar}",
         "format": "{:%d.%m. %H:%M}"
     },
     "cpu": {
