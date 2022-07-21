@@ -16,8 +16,8 @@ case $1 in
         done
         ;;
     home)
-        left=DP-3
-        right=DP-4
+        left=$(swaymsg -t get_outputs --pretty|grep 'Ancor Communications Inc ASUS MG279'|cut -d' ' -f2)
+        right=$(swaymsg -t get_outputs --pretty|grep 'Unknown AORUS FI27Q'|cut -d' ' -f2)
 
         for i in 1 2 3 4; do
             swaymsg workspace $i && swaymsg move workspace to output $left; swaymsg workspace "$current_workspace"
