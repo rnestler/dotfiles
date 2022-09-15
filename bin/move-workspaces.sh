@@ -7,12 +7,12 @@ laptop=eDP-1
 
 case $1 in
     work)
-        output=DP-4
+        screen=$(swaymsg -t get_outputs --pretty|grep 'Unknown M44-DFHD-120'|cut -d' ' -f2)
         for i in 1 2; do
             swaymsg workspace $i && swaymsg "move workspace to output $laptop"; swaymsg workspace "$current_workspace"
         done
         for i in 3 4 5 6 7 8 9 10; do
-            swaymsg workspace $i && swaymsg "move workspace to output $output"; swaymsg workspace "$current_workspace"
+            swaymsg workspace $i && swaymsg "move workspace to output $screen"; swaymsg workspace "$current_workspace"
         done
         ;;
     home)
