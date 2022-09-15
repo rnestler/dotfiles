@@ -237,7 +237,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Screenshot
-bindsym print     exec filename=$(date +'screenshot-%Y%m%d-%H%M%S.png') && swaymsg -t get_tree | jq -r '.. | (.nodes? // empty)[] | select(.pid and .visible) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp | grim -g - /tmp/$filename && notify-send "Screenshot captured" "/tmp/$filename"
+bindsym print     exec $HOME/bin/take_screenshot.sh
 
 # Screen lock
 bindsym Ctrl+Alt+L exec swaylock --screenshot --effect-pixelate=10
