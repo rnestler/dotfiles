@@ -10,6 +10,7 @@ alias gitb="git branch"
 alias gitl="git log"
 alias gitt="git tag -a"
 alias gitpn='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+alias gdmb='git delete-merged-branches --effort=3'
 
 alias p='playerctl play-pause'
 
