@@ -11,3 +11,5 @@
 	autosquash = true
 [pull]
 	ff = only
+[advice]
+	skippedCherryPicks = false
