@@ -31,8 +31,6 @@ Plugin 'easymotion/vim-easymotion'
 
 Plugin 'kien/ctrlp.vim'
 
-Plugin 'vim-scripts/Conque-GDB'
-
 " Ruby / Rails plugins
 
 Plugin 'tpope/vim-bundler'
