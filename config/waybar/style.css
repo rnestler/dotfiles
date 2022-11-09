@@ -3,7 +3,6 @@
     border-radius: 0;
     font-family: "Noto Sans", Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
-    color: white;
 }
 
 button:hover {
@@ -48,12 +47,9 @@ window#waybar {
 }
 
 #battery {
-    background-color: #ffffff;
-    color: black;
 }
 
 #battery.charging {
-    color: white;
     background-color: #26A65B;
 }
 
@@ -82,4 +78,5 @@ window#waybar {
 #mode, #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #idle_inhibitor, #custom-media, #custom-pacman, #custom-openvpn {
     padding: 0 6px;
     margin: 0 0px;
+    color: white;
 }
