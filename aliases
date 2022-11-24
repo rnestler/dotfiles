@@ -26,3 +26,8 @@ alias sem="semaphoreci"
 alias vim="nvim"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
+
+# bundler aliases
+alias bi="bundle install"
+alias be="bundle exec"
+alias ber="bundle exec rspec"
