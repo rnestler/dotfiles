@@ -76,7 +76,7 @@
         },
         "format": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
-        "format-not-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-full": " {capacity}%",
         "format-alt": "{icon} {time}",
         // "format-good": "", // An empty format will hide the module
