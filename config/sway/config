@@ -237,7 +237,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Screenshot
-bindsym print     exec $HOME/bin/take_screenshot.sh
+bindsym print       exec $HOME/bin/take_screenshot.sh
+bindsym Ctrl+print  exec $HOME/bin/take_fullscreen_screenshot.sh
 
 # Screen lock
 bindsym Ctrl+Alt+L exec swaylock --screenshot --effect-pixelate=10
