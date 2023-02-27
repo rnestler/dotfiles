@@ -1,0 +1,21 @@
+profile home {
+    output "Ancor Communications Inc ASUS MG279 0x0000A3FB" position 0,0
+    output "Unknown AORUS FI27Q 20430B002168" position 2560,0
+    output eDP-1 position 5120,0
+    exec ~/bin/move-workspaces.sh home
+}
+
+profile tv {
+    output "Iiyama North America PL4372UH 0x0000004B" position 0,0 scale 2
+    output eDP-1 position 3840,0
+}
+
+profile work {
+    output "Unknown M44-DFHD-120 0000000000000" mode 3940x1080 position 1920,0
+    output eDP-1 position 0,0
+    exec ~/bin/move-workspaces.sh work
+}
+
+profile {
+    output eDP-1 position 0,0
+}
