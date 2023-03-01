@@ -9,7 +9,7 @@ profile home {
 
 profile tv {
     output "Iiyama North America PL4372UH 0x0000004B" position 0,0 scale 2
-    output eDP-1 position 3840,0
+    output eDP-1 position 1920,0
 }
 
 profile work {
