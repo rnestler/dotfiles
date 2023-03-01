@@ -7,7 +7,7 @@ laptop=eDP-1
 
 case $1 in
     work)
-        screen=$(swaymsg -t get_outputs --pretty|grep 'Unknown M44-DFHD-120'|cut -d' ' -f2)
+        screen=$(swaymsg -t get_outputs --pretty|grep 'Beihai Century Joint Innovation Technology Co.,Ltd M44-DFHD-120'|cut -d' ' -f2)
         for i in 1 2; do
             swaymsg workspace $i && swaymsg "move workspace to output $laptop"; swaymsg workspace "$current_workspace"
         done
@@ -17,7 +17,7 @@ case $1 in
         ;;
     home)
         left=$(swaymsg -t get_outputs --pretty|grep 'Ancor Communications Inc ASUS MG279'|cut -d' ' -f2)
-        right=$(swaymsg -t get_outputs --pretty|grep 'Unknown AORUS FI27Q 20430B002168'|cut -d' ' -f2)
+        right=$(swaymsg -t get_outputs --pretty|grep 'GIGA-BYTE TECHNOLOGY CO., LTD. AORUS FI27Q 20430B002168'|cut -d' ' -f2)
 
         for i in 1 2 3 4; do
             swaymsg workspace $i && swaymsg move workspace to output $left; swaymsg workspace "$current_workspace"
