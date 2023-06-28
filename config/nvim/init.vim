@@ -26,6 +26,8 @@ call plug#begin(stdpath('data') . '/plugged')
     " Handles indentation settings smartly. Also handles .editorconfig
     Plug 'tpope/vim-sleuth'
 
+    Plug 'tpope/vim-commentary'
+
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
 
