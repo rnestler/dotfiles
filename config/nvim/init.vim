@@ -146,4 +146,6 @@ nnoremap <silent> gD    <cmd>:tab split<CR><cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gi    <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> gI    <cmd>:tab split<CR><cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <space>rn      <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <silent> <space><space> <cmd>lua vim.lsp.buf.formatting()<CR>
+" f for fix -> code_action"
+nnoremap <silent> <space>f       <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> <space><space> <cmd>lua vim.lsp.buf.format { async = true }<CR>
