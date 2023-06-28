@@ -47,6 +47,12 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'hrsh7th/nvim-cmp'
     Plug 'hrsh7th/vim-vsnip'
 
+    " Typescript
+    Plug 'jose-elias-alvarez/typescript.nvim'
+
+    " Elixir
+    Plug 'elixir-tools/elixir-tools.nvim'
+
     Plug 'simrat39/rust-tools.nvim'
 
     Plug 'kyazdani42/nvim-web-devicons' " for file icons
@@ -111,6 +117,8 @@ lua <<EOF
         })
     })
 
+    require("elixir").setup({})
+
     require('rust-tools').setup({})
 
     -- Python autocompletion with pylsp
@@ -129,6 +137,8 @@ lua <<EOF
     })
 
     require'lspconfig'.solargraph.setup{}
+
+    require'typescript'.setup{}
 
     require'nvim-web-devicons'.setup {}
     require'nvim-tree'.setup {
