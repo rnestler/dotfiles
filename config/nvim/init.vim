@@ -90,6 +90,14 @@ let test#strategy = "neovim"
 set completeopt=menu,menuone,noselect
 
 lua <<EOF
+    require('telescope').setup{
+        defaults = {
+            layout_config = {
+                vertical = { width = 0.9 },
+                horizontal = { width = 0.9 }
+            }
+        }
+    }
     -- Setup nvim-cmp.
     local cmp = require'cmp'
 
