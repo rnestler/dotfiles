@@ -135,10 +135,14 @@ lua <<EOF
           pylsp = {
               configurationSources = { "mypy", "black" },
               plugins = {
-                  mypy = { enabled = true },
+                  mypy = { enabled = false, live_mode = false, dmypy = false, strict = true },
+                  pyls_mypy = { enabled = false, live_mode = false, dmypy = false, strict = true },
                   black = { enabled = true },
                   isort = { enabled = true },
+                  pylint = { enabled = false },
                   pycodestyle = { enabled = false },
+                  flake8 = { enabled = false },
+                  ruff = { enabled = true },
               },
           },
       },
@@ -146,6 +150,12 @@ lua <<EOF
 
     require'lspconfig'.solargraph.setup{}
 
+    require'lspconfig'.eslint.setup{
+        on_attach = function(client, bufnr)
+            local opts = { buffer = bufnr }
+            vim.keymap.set('n', '<space><space>', function() vim.cmd('EslintFixAll') end, opts)
+        end,
+    }
     require'typescript'.setup{}
 
     require'nvim-web-devicons'.setup {}
