@@ -161,7 +161,6 @@ lua <<EOF
 
     require'nvim-web-devicons'.setup {}
     require'nvim-tree'.setup {
-        open_on_setup        = true,
         open_on_tab          = true,
         renderer = {
             highlight_opened_files = "name"
