@@ -143,7 +143,7 @@ lua <<EOF
                   pylint = { enabled = false },
                   pycodestyle = { enabled = false },
                   flake8 = { enabled = false },
-                  ruff = { enabled = true },
+                  ruff = { enabled = true, format = { "I" } },
               },
           },
       },
