@@ -1,5 +1,6 @@
 [Unit]
 Description=nextcloud
+PartOf=graphical-session.target
 After=network-online.target
 Wants=network-online.target systemd-networkd-wait-online.service
 
@@ -10,4 +11,4 @@ RestartSec=5s
 LimitNOFILE=65535:65535
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=graphical-session.target

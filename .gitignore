@@ -1,4 +1,4 @@
 *.swp
 /config/lazygit/state.yml
 /config/nushell/history.txt
-/config/systemd/user/multi-user.target.wants/
+/config/systemd/user/graphical-session.target.wants/
