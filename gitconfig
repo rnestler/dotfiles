@@ -16,3 +16,5 @@
 	skippedCherryPicks = false
 [init]
 	defaultBranch = main
+[branch]
+	sort = -committerdate
