@@ -9,6 +9,7 @@
 	helper = cache
 [rebase]
 	autosquash = true
+	updateRefs = true
 [pull]
 	ff = only
 [advice]
