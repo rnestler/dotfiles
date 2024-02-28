@@ -1,7 +1,5 @@
 profile home {
     output "Ancor Communications Inc ASUS MG279 0x0001A3FB" position 0,0
-    # Before sway / wlroots upgrade
-    # output "Unknown AORUS FI27Q 20430B002168" position 2560,0
     output "GIGA-BYTE TECHNOLOGY CO., LTD. AORUS FI27Q 20430B002168" position 2560,0
     output eDP-1 position 5120,0
     exec ~/bin/move-workspaces.sh home
