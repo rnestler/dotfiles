@@ -34,6 +34,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 exec kanshi
 
+default_border pixel 2
+smart_borders on
+
 ### Idle configuration
 #
 # Example configuration:
