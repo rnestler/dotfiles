@@ -51,10 +51,10 @@ exec kanshi
 exec swayidle -w \
          timeout 180 'brightnessctl set 50%-' \
               resume 'brightnessctl set 50%+' \
-         timeout 200 'swaylock --screenshots --effect-pixelate=10  --indicator-idle-visible --fade-in 2 --grace 2 -f' \
+         timeout 200 'swaylock -f' \
          timeout 300 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock --screenshot --effect-pixelate=10 -f'
+        before-sleep 'swaylock -f'
 
 ### Input configuration
 #
@@ -239,7 +239,7 @@ bindsym print       exec $HOME/bin/take_screenshot.sh
 bindsym Ctrl+print  exec $HOME/bin/take_fullscreen_screenshot.sh
 
 # Screen lock
-bindsym Ctrl+Alt+L exec swaylock --screenshot --effect-pixelate=10
+bindsym Ctrl+Alt+L exec swaylock
 
 #
 # Status Bar:
