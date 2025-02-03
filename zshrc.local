@@ -57,6 +57,13 @@ if [ -f ~/.profile ]; then
     source ~/.profile
 fi
 
+# asdf-vm 0.15
 if [ -f /opt/asdf-vm/asdf.sh ]; then
     source /opt/asdf-vm/asdf.sh
+fi
+
+# asdf-vm 0.16
+if [ -f /usr/bin/asdf ]; then
+    export ASDF_DATA_DIR=$HOME/.asdf
+    export PATH="$ASDF_DATA_DIR/shims:$PATH"
 fi
