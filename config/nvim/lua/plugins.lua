@@ -108,8 +108,10 @@ require('lspconfig').pylsp.setup {
   },
 }
 
--- Ruby (solargraph)
-require('lspconfig').solargraph.setup {}
+-- Ruby (solargraph, ruby_lsp, steep)
+--require('lspconfig').solargraph.setup {}
+require('lspconfig').ruby_lsp.setup{}
+--require'lspconfig'.steep.setup{}
 
 -- JavaScript/TypeScript (eslint + typescript.nvim)
 require('lspconfig').eslint.setup {
