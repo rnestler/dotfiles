@@ -3,8 +3,10 @@ https://www.archlinux.org/feeds/news/ news
 https://www.archlinux.org/feeds/planet/ news
 https://lwn.net/headlines/newrss news
 
-http://0pointer.net/blog/index.atom blog
-https://rnestler.github.io/feeds/all.atom.xml blog
+https://librepcb.org/blog/index.xml
+
+https://0pointer.net/blog/index.atom blog
+https://blog.rnstlr.ch/feeds/all.atom.xml blog
 https://blog.dbrgn.ch/feed.atom blog
 https://blog.rust-lang.org/feed.xml blog rust
 http://blog.piston.rs/atom.xml blog rust
