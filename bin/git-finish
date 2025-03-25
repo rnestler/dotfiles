@@ -5,7 +5,7 @@ set -euo pipefail
 if (( $# >= 1 )); then
     main_branch="$1"
 else
-    main_branch=$(git rev-parse --abbrev-ref origin/HEAD|cut -d'/' -f2-)
+    main_branch=$(git rev-parse --abbrev-ref origin/HEAD --|cut -d'/' -f2-)
 fi
 
 current_branch=$(git rev-parse --abbrev-ref HEAD)
