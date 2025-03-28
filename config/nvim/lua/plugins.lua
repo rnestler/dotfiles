@@ -29,7 +29,6 @@ vim.cmd [[
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/vim-vsnip'
 
-  Plug 'jose-elias-alvarez/typescript.nvim'
   Plug 'elixir-tools/elixir-tools.nvim'
   Plug 'simrat39/rust-tools.nvim'
 
@@ -121,8 +120,6 @@ require('lspconfig').eslint.setup {
     end, { buffer = bufnr })
   end,
 }
-
-require('typescript').setup {}
 
 -- Icons
 require('nvim-web-devicons').setup {}
