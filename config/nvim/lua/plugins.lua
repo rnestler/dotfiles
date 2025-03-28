@@ -45,10 +45,25 @@ vim.cmd("colorscheme solarized")
 -- Plugin specific globals
 vim.g.gitgutter_highlight_linenrs = 1
 
+
+local trailing_ws = {
+  function()
+    local space = vim.fn.search([[\s\+$]], 'nwc')
+    return space ~= 0 and "⚠️TW:" .. space or ""
+  end,
+  color = { fg="primary", bg = "orange", gui = "bold" },
+}
+
 require('lualine').setup {
   options = {
     theme = 'auto',
-  }
+  },
+  sections = {
+    lualine_y = { 'progress', 'location' },
+    lualine_z = {
+      trailing_ws
+    },
+  },
 }
 
 -- Telescope setup
