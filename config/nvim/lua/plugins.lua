@@ -3,7 +3,7 @@ vim.cmd [[
   call plug#begin(stdpath('data') . '/plugged')
 
   Plug 'ishan9299/nvim-solarized-lua'
-  Plug 'vim-airline/vim-airline'
+  Plug 'nvim-lualine/lualine.nvim'
 
   " Handles indentation settings smartly. Also handles .editorconfig
   Plug 'tpope/vim-sleuth'
@@ -44,7 +44,12 @@ vim.cmd("colorscheme solarized")
 
 -- Plugin specific globals
 vim.g.gitgutter_highlight_linenrs = 1
-vim.g.airline_powerline_fonts = 1
+
+require('lualine').setup {
+  options = {
+    theme = 'solarized_light',
+  }
+}
 
 -- Telescope setup
 require('telescope').setup {
