@@ -47,7 +47,7 @@ vim.g.gitgutter_highlight_linenrs = 1
 
 require('lualine').setup {
   options = {
-    theme = 'solarized_light',
+    theme = 'auto',
   }
 }
 
