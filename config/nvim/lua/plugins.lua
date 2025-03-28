@@ -88,6 +88,9 @@ require("elixir").setup({})
 -- Rust
 require('rust-tools').setup({})
 
+-- Go
+require('lspconfig').gopls.setup{}
+
 -- Python (pylsp)
 require('lspconfig').pylsp.setup {
   settings = {
