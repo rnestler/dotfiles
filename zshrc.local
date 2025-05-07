@@ -57,11 +57,6 @@ if [ -f ~/.profile ]; then
     source ~/.profile
 fi
 
-# asdf-vm 0.15
-if [ -f /opt/asdf-vm/asdf.sh ]; then
-    source /opt/asdf-vm/asdf.sh
-fi
-
 if [[ -f /usr/bin/mise ]]; then
     eval "$(mise activate zsh)"
 fi
