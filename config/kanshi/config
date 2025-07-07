@@ -1,3 +1,8 @@
+profile desktop {
+    output DP-1 position 0,0
+    output DP-2 position 2560,0
+}
+
 profile home {
     output "Ancor Communications Inc ASUS MG279 0x0001A3FB" position 0,0
     output "GIGA-BYTE TECHNOLOGY CO., LTD. AORUS FI27Q 20430B002168" position 2560,0
