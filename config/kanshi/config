@@ -16,8 +16,8 @@ profile tv {
 }
 
 profile work {
-    output "Beihai Century Joint Innovation Technology Co.,Ltd M44-DFHD-120 0000000000000" mode 3840x1080 position 1920,0
-    output eDP-1 position 0,0
+    output "Beihai Century Joint Innovation Technology Co.,Ltd M44-DFHD-120 0000000000000" mode 3840x1080@120 position 0,0
+    output eDP-1 position 3840,0
     exec ~/bin/move-workspaces.sh work
 }
 
