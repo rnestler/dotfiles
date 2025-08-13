@@ -21,6 +21,11 @@ profile work {
     exec ~/bin/move-workspaces.sh work
 }
 
+profile work_beamer {
+    output "LG Electronics LG PROJECTOR 0x01010101" position 1920,0 scale 2
+    output eDP-1 position 0,0
+}
+
 profile {
     output eDP-1 position 0,0
 }
