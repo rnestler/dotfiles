@@ -9,25 +9,15 @@ https://0pointer.net/blog/index.atom blog
 https://blog.rnstlr.ch/feeds/all.atom.xml blog
 https://blog.dbrgn.ch/feed.atom blog
 https://blog.rust-lang.org/feed.xml blog rust
-http://blog.piston.rs/atom.xml blog rust
 https://this-week-in-rust.org/atom.xml blog rust
 https://github.com/blog/all.atom blog
 https://about.gitlab.com/atom.xml blog
 https://hackaday.com/blog/feed/ blog
-http://blog.japaric.io/index.xml blog rust
 http://blog.rustfest.eu/feed.xml blog rust
-https://hoverbear.org/feed.xml blog rust
 https://www.coredump.ch/feed/ blog
-
-http://lightning.community/feed.xml blog bitcoin lightning
-https://blog.lightning.engineering/feed.xml blog bitcoin lightning
 
 https://what-if.xkcd.com/feed.atom fun
 https://xkcd.com/atom.xml comic
 
 http://seclists.org/rss/bugtraq.rss
 https://apod.nasa.gov/apod.rss
-https://www.piratenpartei.ch/feed/
-https://feedproxy.google.com/distrowatch/BFai
-https://whatshouldwecallengineering.tumblr.com/rss fun
-https://youmightbeanengineeringstudentif.tumblr.com/rss fun
