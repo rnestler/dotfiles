@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+current_workspace() {
+    swaymsg -t get_workspaces \
+        | jq -r '.[] | select(.focused==true) | .name'
+}
+
+
+# ChatGPT generated magic...
+find_slack_con_ids() {
+  swaymsg -t get_tree \
+    | jq -r '
+      # Depth-first over sway tree; only traverse objects that have child arrays
+      recurse(.nodes[]?, .floating_nodes[]?)
+      | select(type=="object")
+      | select(
+          # Wayland apps: app_id often like "Slack", "slack", or "com.slack.Slack"
+          (.app_id // "" | ascii_downcase | contains("slack"))
+          or
+          # XWayland apps: window_properties.class is usually "Slack", instance "slack"
+          ((.window_properties // {})
+            | ([(.class // ""), (.instance // "")]
+               | map(ascii_downcase)
+               | join(" "))
+            | contains("slack"))
+        )
+      | .id
+    '
+}
+
+move_and_focus_all_to_workspace() {
+  local ws="$1"
+  # Move every matching container (sidebars/popouts included) & focus main one last
+  mapfile -t ids < <(find_slack_con_ids)
+  [[ ${#ids[@]} -eq 0 ]] && return 1
+
+  for id in "${ids[@]}"; do
+    swaymsg "[con_id=$id]" move container to workspace "$ws" >/dev/null
+  done
+  # Focus the first one we found
+  swaymsg workspace "$ws" >/dev/null
+  swaymsg "[con_id=${ids[0]}]" focus >/dev/null
+}
+
+
+launch_slack() {
+    nohup /usr/bin/slack --enable-features=UseOzonePlatform --ozone-platform=wayland >/dev/null 2>&1 &
+}
+
+
+
+ws="$(current_workspace)"
+
+if move_and_focus_all_to_workspace "$ws"; then
+    exit 0
+fi
+
+launch_slack
