@@ -30,7 +30,7 @@ vim.cmd [[
   Plug 'hrsh7th/vim-vsnip'
 
   Plug 'elixir-tools/elixir-tools.nvim'
-  Plug 'simrat39/rust-tools.nvim'
+  Plug 'mrcjkb/rustaceanvim'
 
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'kyazdani42/nvim-tree.lua'
@@ -104,9 +104,6 @@ cmp.setup({
 
 -- Elixir
 require("elixir").setup({})
-
--- Rust
-require('rust-tools').setup({})
 
 -- Go
 require('lspconfig').gopls.setup{}
