@@ -29,6 +29,8 @@ vim.cmd [[
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/vim-vsnip'
 
+  Plug 'onsails/diaglist.nvim'
+
   Plug 'elixir-tools/elixir-tools.nvim'
   Plug 'mrcjkb/rustaceanvim'
 
@@ -145,6 +147,11 @@ vim.lsp.config('eslint', {
   end,
 })
 vim.lsp.enable('eslint')
+
+require("diaglist").init({})
+vim.keymap.set('n', '<space>dw', function()
+  require('diaglist').open_all_diagnostics()
+end)
 
 vim.diagnostic.config({
   virtual_text = {
