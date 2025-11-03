@@ -106,10 +106,10 @@ cmp.setup({
 require("elixir").setup({})
 
 -- Go
-require('lspconfig').gopls.setup{}
+vim.lsp.enable('gopls')
 
 -- Python (pylsp)
-require('lspconfig').pylsp.setup {
+vim.lsp.config('pylsp', {
   settings = {
     pylsp = {
       configurationSources = { "mypy", "black" },
@@ -125,21 +125,37 @@ require('lspconfig').pylsp.setup {
       },
     },
   },
-}
+})
+vim.lsp.enable('pylsp')
 
 -- Ruby (solargraph, ruby_lsp, steep)
---require('lspconfig').solargraph.setup {}
-require('lspconfig').ruby_lsp.setup{}
---require'lspconfig'.steep.setup{}
+--vim.lsp.enable('solargraph')
+vim.lsp.enable('ruby_lsp')
+--vim.lsp.enable('steep')
+
+vim.lsp.enable('standardrb')
+--vim.lsp.enable('rubocop')
 
 -- JavaScript/TypeScript (eslint + typescript.nvim)
-require('lspconfig').eslint.setup {
+vim.lsp.config('eslint', {
   on_attach = function(_, bufnr)
     vim.keymap.set('n', '<space><space>', function()
       vim.cmd('EslintFixAll')
     end, { buffer = bufnr })
   end,
-}
+})
+vim.lsp.enable('eslint')
+
+vim.diagnostic.config({
+  virtual_text = {
+  },
+
+  virtual_lines = {
+    -- Only show virtual line diagnostics for the current cursor line
+    current_line = true,
+  },
+  float = { border = border },
+})
 
 -- Icons
 require('nvim-web-devicons').setup {}
