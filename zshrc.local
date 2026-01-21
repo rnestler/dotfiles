@@ -60,3 +60,7 @@ fi
 if [[ -f /usr/bin/mise ]]; then
     eval "$(mise activate zsh)"
 fi
+
+if [[ -f /usr/bin/nctl ]]; then
+    source <(nctl completions -c zsh)
+fi
