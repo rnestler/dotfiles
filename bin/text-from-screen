@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -euo pipefail
+
+TMP_IMG="$(mktemp).png"
+trap "rm $TMP_IMG" EXIT
+
+grim -g "$(slurp)" "$TMP_IMG"
+
+# could increase detection rate if text is small
+#mogrify -modulate 100,0 -resize 400% $TMP_IMG
+
+tesseract $TMP_IMG stdout -l eng+deu | tee /dev/stderr | tr -d '\n' | wl-copy
