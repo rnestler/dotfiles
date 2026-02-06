@@ -4,6 +4,7 @@
 [user]
 	name = Raphael Nestler
 	email = raphael.nestler@gmail.com
+	signingkey = ~/.ssh/id_github
 [push]
 	default = simple
 [color]
@@ -19,5 +20,7 @@
 	skippedCherryPicks = false
 [init]
 	defaultBranch = main
+[gpg]
+	format = ssh
 [branch]
 	sort = -committerdate
