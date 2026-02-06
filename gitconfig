@@ -1,5 +1,6 @@
 [diff]
 	colorMoved = default
+	tool = meld
 [user]
 	name = Raphael Nestler
 	email = raphael.nestler@gmail.com
