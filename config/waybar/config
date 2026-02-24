@@ -86,7 +86,11 @@
     },
     "memory": {
         "format": " {}%",
-        "on-click": "alacritty -e top"
+        "on-click": "alacritty -e top",
+        "states": {
+            "warning": 70,
+            "critical": 85
+        }
     },
     "temperature": {
         // "thermal-zone": 2,
