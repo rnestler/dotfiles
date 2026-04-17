@@ -1,0 +1,16 @@
+{
+  "extends": "claude-code",
+  "meta": {
+    "name": "claude"
+  },
+  "security": {
+    "groups": []
+  },
+  "workdir": {
+    "access": "readwrite"
+  },
+  "filesystem": {
+    "allow": ["/tmp/claude-1000/", "/tmp/claude-gather/"],
+    "read": ["/opt/claude-code/"]
+  }
+}
