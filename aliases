@@ -22,6 +22,11 @@ alias gdmb='git delete-merged-branches --effort=3'
 
 alias sudo='printf "\e[1;33m[Notice]\e[0m Please use \e[1;32mrun0\e[0m for better systemd integration.\n"; run0'
 
+# Rip Grep Pretty
+rgp() {
+  rg --json -C 2 "$*" | delta
+}
+
 alias p='playerctl play-pause'
 
 fsize () {

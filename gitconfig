@@ -1,3 +1,10 @@
+[core]
+	pager = delta
+	hooksPath = ~/.config/git/hooks.d
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	conflictstyle = zdiff3
 [diff]
 	colorMoved = default
 	tool = meld
@@ -24,3 +31,6 @@
 	format = ssh
 [branch]
 	sort = -committerdate
+[delta]
+	navigate = true
+	features = mantis-shrimp-lite
