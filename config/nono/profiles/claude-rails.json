@@ -1,0 +1,9 @@
+{
+  "extends": "claude-arch",
+  "filesystem": {
+    "read": ["~/.local/share/mise/installs/ruby"],
+    "read_file": ["/etc/passwd"],
+    "allow": ["~/.cache/rubocop_cache"],
+    "unix_socket": ["/var/run/postgresql/.s.PGSQL.5432"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "extends": ["claude-arch", "go-dev"],
+  "meta": {
+    "name": "claude-go",
+    "version": "1.0.0",
+    "description": "Claude Code with Go toolchain grants (GOPATH, module/build cache, Go proxy)"
+  }
+}

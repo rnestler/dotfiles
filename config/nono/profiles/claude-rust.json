@@ -1,0 +1,12 @@
+{
+  "extends": ["claude-arch", "rust-dev"],
+  "meta": {
+    "name": "claude-rust",
+    "version": "1.0.0",
+    "description": "Claude Code with Rust/cargo toolchain grants"
+  },
+  "filesystem": {
+    "read_file": ["/etc/passwd"],
+    "unix_socket": ["/var/run/postgresql/.s.PGSQL.5432"]
+  }
+}
