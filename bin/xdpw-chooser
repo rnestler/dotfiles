@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# xdg-desktop-portal-wlr chooser: pick a monitor or window with slurp
+
+# xdpw is started from the systemd user session and may not inherit SWAYSOCK
+if [ -z "${SWAYSOCK:-}" ]; then
+    SWAYSOCK=$(ls -t "/run/user/$(id -u)/sway-ipc.$(id -u)."*.sock 2>/dev/null | head -n1)
+    export SWAYSOCK
+fi
+
+swaymsg -t get_tree | jq -r '
+  .. | objects |
+  if .type == "output" and .name != "__i3" then
+    "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height) Monitor: \(.name)"
+  elif .visible == true and .foreign_toplevel_identifier != null then
+    "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height) Window: \(.foreign_toplevel_identifier)"
+  else empty end
+' | slurp -r -f $'%l\n'
