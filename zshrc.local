@@ -64,3 +64,7 @@ fi
 if [[ -f /usr/bin/nctl ]]; then
     source <(nctl completions -c zsh)
 fi
+
+if [[ -f /usr/bin/nono ]]; then
+    source <(nono completion zsh)
+fi
