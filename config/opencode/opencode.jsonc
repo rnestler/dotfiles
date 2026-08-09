@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": "ask",
+    "edit": "allow"
+  },
+  "provider": {
+    "infomaniak": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Infomaniak AI Tools",
+      "options": {
+          "baseURL": "https://api.infomaniak.com/2/ai/110381/openai/v1"
+      },
+      "models": {
+        "moonshotai/Kimi-K2.6": {
+          "name": "Kimi-K2.6",
+          "tool_call": true,
+          "limit": { "context": 265000, "output": 10000 }
+        },
+        "Qwen/Qwen3.5-397B-A17B-FP8": {
+          "name": "Qwen 3.5-397B",
+          "tool_call": true,
+          "limit": { "context": 200000, "output": 10000 }
+        }
+      }
+    }
+  }
+}
