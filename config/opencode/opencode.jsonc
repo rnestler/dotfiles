@@ -6,7 +6,10 @@
       "grep *": "allow",
       "rg *": "allow",
       "tail *": "allow",
-      "head *": "allow"
+      "head *": "allow",
+      "git status *": "allow",
+      "git diff *": "allow",
+      "git log *": "allow"
     },
     "edit": "allow"
   },
