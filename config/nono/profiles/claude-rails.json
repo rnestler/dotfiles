@@ -25,17 +25,20 @@
   },
   "filesystem": {
     "allow": [
-      "$HOME/.cache/rubocop_cache",
+      "$HOME/.cache/rubocop_cache"
     ],
     "read": [
-      "$HOME/.local/share/mise/installs/ruby"
+      "$HOME/.local/share/mise/installs/ruby",
+      "$HOME/.local/share/mise/installs/node/",
+      "$HOME/.local/share/ruby-advisory-db",
+      "$HOME/.cache/Cypress",
+      "$HOME/.config/yarn"
     ],
     "write": [],
-    "allow_file": [
-      "~/.irb_history",
-    ],
+    "allow_file": [],
     "read_file": [
       "/etc/passwd",
+      "~/.yarnrc"
     ],
     "write_file": [],
     "unix_socket": [
