@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "name": "makepkg",
+    "version": "1.0.0"
+  },
+  "filesystem": {
+    "read_file": [
+      "/etc/makepkg.conf",
+      "/etc/pacman.conf",
+      "/etc/passwd"
+    ],
+    "read": [
+      "/etc/pacman.d",
+      "/var/lib/pacman"
+    ]
+  }
+}
