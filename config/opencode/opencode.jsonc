@@ -3,6 +3,7 @@
   "permission": {
     "bash": {
       "*": "ask",
+      "ls *": "allow",
       "grep *": "allow",
       "rg *": "allow",
       "tail *": "allow",
