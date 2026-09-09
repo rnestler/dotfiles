@@ -8,6 +8,7 @@
       "rg *": "allow",
       "tail *": "allow",
       "head *": "allow",
+      "cat *": "allow",
       "git status *": "allow",
       "git diff *": "allow",
       "git log *": "allow",
