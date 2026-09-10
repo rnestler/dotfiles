@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "name": "mise",
+    "version": "1.0.0"
+  },
+  "filesystem": {
+    "read": [
+      "$HOME/.local/share/mise/"
+    ],
+    "read_file": [
+      "~/.config/mise/config.toml",
+      "~/.tool-versions"
+    ]
+  }
+}
