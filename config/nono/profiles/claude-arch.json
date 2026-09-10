@@ -1,5 +1,5 @@
 {
-  "extends": "claude-code",
+  "extends": "nolabs-ai/claude",
   "meta": {
     "name": "claude-arch"
   },
