@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "name": "selenium"
+  },
+  "filesystem": {
+    "allow": [
+      "$HOME/.cache/selenium/",
+      "/dev/shm",
+      "/tmp"
+    ]
+  }
+}
