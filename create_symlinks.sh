@@ -5,7 +5,7 @@ set -euo pipefail
 function createSymlink {
     if [ -e ~/"$2" ]; then
         if [ -L ~/"$2" ]; then
-            echo "~/$2 already exists"
+            echo "$HOME/$2 already exists"
         else
             echo "WARNING: ~/$2 already exists and is no symlink!"
         fi
