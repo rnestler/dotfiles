@@ -1,0 +1,29 @@
+{
+  "providers": {
+    "infomaniak": {
+      "baseUrl": "https://api.infomaniak.com/2/ai/110381/openai/v1",
+      "api": "openai-completions",
+      "apiKey": "$INFOMANIAK_API_KEY",
+      "compat": {
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": false
+      },
+      "models": [
+        {
+          "id": "moonshotai/Kimi-K2.6",
+          "name": "Kimi-K2.6",
+          "input": ["text"],
+          "contextWindow": 265000,
+          "maxTokens": 10000
+        },
+        {
+          "id": "Qwen/Qwen3.5-397B-A17B-FP8",
+          "name": "Qwen 3.5-397B",
+          "input": ["text"],
+          "contextWindow": 200000,
+          "maxTokens": 10000
+        }
+      ]
+    }
+  }
+}

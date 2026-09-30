@@ -28,7 +28,7 @@ done
 # $1 src $2 target
 function setupFolder {
     mkdir -p ~/"$2"/
-    for file in `find ${PWD}/${1}/ -maxdepth 1 -not -name '.*' -not -name ${1}`; do
+    for file in `find ${PWD}/${1}/ -maxdepth 1 -not -name '.*' -not -name $(basename ${1})`; do
         filename=`basename "$file"`
         createSymlink "$1/$filename" "$2/$filename"
     done
@@ -50,6 +50,7 @@ setupFolder bin bin
 setupFolder config .config
 setupFolder weechat .weechat
 setupFolder doom.d .doom.d
+setupFolder pi/agent .pi/agent
 
 if [ -e ~/.local/share/nvim/site/autoload/plug.vim ]; then
     echo "plug.vim alreadys exists"
