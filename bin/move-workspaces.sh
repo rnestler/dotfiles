@@ -6,6 +6,15 @@ current_workspace=$(swaymsg -t get_workspaces|jq '.[]|select(.focused) | .name')
 laptop=eDP-1
 
 case $1 in
+    desktop)
+        for i in 1 2 3 4 5; do
+            swaymsg workspace $i && swaymsg "move workspace to output DP-1";
+        done
+        for i in 6 7 8 9 10; do
+            swaymsg workspace $i && swaymsg "move workspace to output DP-2";
+        done
+        swaymsg workspace "$current_workspace"
+        ;;
     work)
         screen=$(swaymsg -t get_outputs --pretty|grep 'Beihai Century Joint Innovation Technology Co.,Ltd M44-DFHD-120'|cut -d' ' -f2)
         for i in 1 2; do
