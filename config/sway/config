@@ -261,3 +261,5 @@ exec mako
 for_window [title="Firefox — Sharing Indicator"] floating enable;
 
 include /etc/sway/config.d/*
+
+exec exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
