@@ -1,0 +1,16 @@
+{
+  "extends": "nolabs-ai/pi",
+  "meta": {
+    "name": "pi-local"
+  },
+  "workdir": {
+    "access": "readwrite"
+  },
+  "filesystem": {
+    "read": [
+      "/opt/pi-coding-agent/",
+      "$HOME/dotfiles/pi/",
+      "/tmp/jiti/"
+    ]
+  }
+}
