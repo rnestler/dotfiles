@@ -1,0 +1,9 @@
+{
+  "extends": "nolabs-ai/opencode",
+  "meta": {
+    "name": "opencode-local"
+  },
+  "workdir": {
+    "access": "readwrite"
+  }
+}
