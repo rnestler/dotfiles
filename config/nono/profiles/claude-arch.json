@@ -7,7 +7,6 @@
     "access": "readwrite"
   },
   "filesystem": {
-    "allow": ["/tmp/claude-1000/", "/tmp/claude-gather/"],
     "read_file": ["/opt/claude-code/bin/claude"]
   },
   "network": {
