@@ -8,5 +8,14 @@
   },
   "workdir": {
     "access": "readwrite"
+  },
+  "network": {
+    "network_profile": "developer",
+    "allow_domain": [
+      "localhost",
+      "127.0.0.1",
+      "opencode.ai",
+      "models.opencode.ai"
+    ]
   }
 }

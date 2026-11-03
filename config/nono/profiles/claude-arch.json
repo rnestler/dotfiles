@@ -9,5 +9,14 @@
   "filesystem": {
     "allow": ["/tmp/claude-1000/", "/tmp/claude-gather/"],
     "read_file": ["/opt/claude-code/bin/claude"]
+  },
+  "network": {
+    "network_profile": "developer",
+    "allow_domain": [
+      "localhost",
+      "127.0.0.1",
+      "mcp-proxy.anthropic.com",
+      "downloads.claude.ai"
+    ]
   }
 }
