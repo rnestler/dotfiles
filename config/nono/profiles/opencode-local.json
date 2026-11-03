@@ -1,5 +1,8 @@
 {
-  "extends": "nolabs-ai/opencode",
+  "extends": [
+    "nolabs-ai/opencode",
+    "infomaniak"
+  ],
   "meta": {
     "name": "opencode-local"
   },

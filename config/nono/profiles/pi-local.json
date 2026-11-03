@@ -1,5 +1,8 @@
 {
-  "extends": "nolabs-ai/pi",
+  "extends": [
+    "nolabs-ai/pi",
+    "infomaniak"
+  ],
   "meta": {
     "name": "pi-local"
   },
@@ -12,5 +15,8 @@
       "$HOME/dotfiles/pi/",
       "/tmp/jiti/"
     ]
+  },
+  "network": {
+    "allow_domain": ["pi.dev"]
   }
 }

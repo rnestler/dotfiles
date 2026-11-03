@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "name": "infomaniak"
+  },
+  "network": {
+    "allow_domain": ["api.infomaniak.com"]
+  }
+}
+
