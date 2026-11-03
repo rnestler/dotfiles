@@ -1,0 +1,21 @@
+{
+  "extends": "nolabs-ai/claude",
+  "meta": {
+    "name": "claude-local"
+  },
+  "workdir": {
+    "access": "readwrite"
+  },
+  "filesystem": {
+    "read_file": ["/opt/claude-code/bin/claude"]
+  },
+  "network": {
+    "network_profile": "developer",
+    "allow_domain": [
+      "localhost",
+      "127.0.0.1",
+      "mcp-proxy.anthropic.com",
+      "downloads.claude.ai"
+    ]
+  }
+}
