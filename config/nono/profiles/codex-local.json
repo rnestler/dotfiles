@@ -1,0 +1,18 @@
+{
+  "extends": "nolabs-ai/codex",
+  "meta": {
+    "name": "codex-local"
+  },
+  "workdir": {
+    "access": "readwrite"
+  },
+  "network": {
+    "network_profile": "developer",
+    "allow_domain": [
+      "localhost",
+      "127.0.0.1",
+      "auth.openai.com",
+      "chatgpt.com"
+    ]
+  }
+}
