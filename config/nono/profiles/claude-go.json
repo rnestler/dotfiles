@@ -1,6 +1,6 @@
 {
   "extends": [
-    "claude-arch",
+    "claude-local",
     "go-dev"
   ],
   "meta": {
