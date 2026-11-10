@@ -51,6 +51,7 @@ setupFolder config .config
 setupFolder weechat .weechat
 setupFolder doom.d .doom.d
 setupFolder pi/agent .pi/agent
+setupFolder claude .claude
 
 if [ -e ~/.local/share/nvim/site/autoload/plug.vim ]; then
     echo "plug.vim alreadys exists"
