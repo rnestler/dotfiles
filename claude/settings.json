@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ],
+    "deny": [
+      "Bash(git push *)"
+    ]
+  },
+  "model": "opus",
+  "hooks": {},
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "nono@nolabs-ai": true
+  },
+  "extraKnownMarketplaces": {},
+  "sandbox": {
+    "enabled": false,
+    "allowUnsandboxedCommands": false
+  },
+  "effortLevel": "high",
+  "tui": "fullscreen",
+  "theme": "auto",
+  "agentPushNotifEnabled": true
+}
