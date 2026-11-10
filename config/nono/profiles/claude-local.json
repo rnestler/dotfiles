@@ -7,7 +7,7 @@
     "access": "readwrite"
   },
   "filesystem": {
-    "read_file": ["/opt/claude-code/bin/claude"]
+    "read_file": ["/opt/claude-code/bin/claude", "$HOME/dotfiles/claude/settings.json"]
   },
   "network": {
     "network_profile": "developer",
