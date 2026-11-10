@@ -7,7 +7,13 @@
       "Bash(git commit *)"
     ],
     "deny": [
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Read(**/config/application.yml)",
+      "Read(**/config/credentials/**)",
+      "Read(**/config/master.key)",
+      "Read(**/.envrc)",
+      "Read(**/.env)",
+      "Read(**/.env.*)"
     ]
   },
   "model": "opus",
