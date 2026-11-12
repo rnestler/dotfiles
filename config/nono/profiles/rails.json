@@ -3,6 +3,9 @@
     "name": "rails",
     "version": "0.1.0"
   },
+  "extends": [
+    "postgres"
+  ],
   "filesystem": {
     "allow": [
       "$HOME/.cache/rubocop_cache"
@@ -15,11 +18,7 @@
       "$HOME/.config/yarn"
     ],
     "read_file": [
-      "/etc/passwd",
       "~/.yarnrc"
-    ],
-    "unix_socket": [
-      "/var/run/postgresql/.s.PGSQL.5432"
     ]
   },
   "environment": {
