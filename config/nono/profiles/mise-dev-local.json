@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "name": "mise-dev-local",
+    "version": "1.0.0"
+  },
+  "extends": ["mise-dev"],
+  "filesystem": {
+    "read_file": ["~/.tool-versions"]
+  }
+}
