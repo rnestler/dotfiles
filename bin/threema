@@ -1,53 +1,8 @@
 #!/usr/bin/env bash
-
 set -euo pipefail
 
-current_workspace() {
-    swaymsg -t get_workspaces \
-        | jq -r '.[] | select(.focused==true) | .name'
-}
-
-
-find_threema_con_ids() {
-  swaymsg -t get_tree \
-    | jq -r '
-      recurse(.nodes[]?, .floating_nodes[]?)
-      | select(type=="object")
-      | select(
-          (.app_id // "" | ascii_downcase | contains("threema"))
-          or
-          ((.window_properties // {})
-            | ([(.class // ""), (.instance // "")]
-               | map(ascii_downcase)
-               | join(" "))
-            | contains("threema"))
-        )
-      | .id
-    '
-}
-
-move_and_focus_all_to_workspace() {
-  local ws="$1"
-  mapfile -t ids < <(find_threema_con_ids)
-  [[ ${#ids[@]} -eq 0 ]] && return 1
-
-  for id in "${ids[@]}"; do
-    swaymsg "[con_id=$id]" move container to workspace "$ws" >/dev/null
-  done
-  swaymsg workspace "$ws" >/dev/null
-  swaymsg "[con_id=${ids[0]}]" focus >/dev/null
-}
-
-
-launch_threema() {
-    XDG_CURRENT_DESKTOP=GNOME nohup /usr/bin/threema-beta >/dev/null 2>&1 &
-}
-
-
-ws="$(current_workspace)"
-
-if move_and_focus_all_to_workspace "$ws"; then
+if swaymsg '[app_id="Threema"] move container to workspace current, focus' >/dev/null 2>&1; then
     exit 0
 fi
 
-launch_threema
+XDG_CURRENT_DESKTOP=GNOME nohup /usr/bin/threema-beta >/dev/null 2>&1 &
